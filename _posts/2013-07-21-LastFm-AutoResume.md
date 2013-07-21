@@ -1,3 +1,9 @@
+---
+published: true
+layout: post
+title: LastFm AutoResume
+---
+
 Ubuntu 10.04 Instructions
 Substitute any number of automated mouse click softwares for a different OS.
 
