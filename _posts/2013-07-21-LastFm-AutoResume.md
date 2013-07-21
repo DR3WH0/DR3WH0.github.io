@@ -1,4 +1,10 @@
-Ubuntu 10.04
+Ubuntu 10.04 Instructions
+Substitute any number of automated mouse click softwares for a different OS.
 
-Install KAutoClick from the Software Center
-Start the LastFm Web client
+1. Install KAutoClick from the Software Center
+2. Start the LastFm Web client
+3. Resize the LastFm window to only show the Slideshow
+4. Wait for the "Are You Listening" dialog to pop up
+5. Start KAutoClick with a 1 minute wait (60000 milliseconds)
+6. Move the mouse over the "Resume" button and leave it there
+7. KAutoClick automatically resumes the LastFm stream
