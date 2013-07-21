@@ -4,8 +4,7 @@ layout: post
 title: LastFm AutoResume
 ---
 
-Ubuntu 10.04 Instructions
-Substitute any number of automated mouse click softwares for a different OS.
+Ubuntu 10.04 Instructions (substitute any number of automated mouse click softwares for a different OS)
 
 1. Install KAutoClick from the Software Center
 2. Start the LastFm Web client
