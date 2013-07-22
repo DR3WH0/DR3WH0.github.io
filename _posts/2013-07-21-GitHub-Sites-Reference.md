@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: GitHub Sites Reference
+title: GitHub Pages Reference
 ---
 
 * Jekyll Variables: <http://jekyllrb.com/docs/variables/>
