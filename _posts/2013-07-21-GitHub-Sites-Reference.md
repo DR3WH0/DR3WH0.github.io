@@ -9,3 +9,4 @@ title: GitHub Pages Reference
 * Prose: <https://github.com/prose/prose/wiki/Prose-Configuration>
 * Markdown: <http://daringfireball.net/projects/markdown/basics>
 * DevSeed Tips: <http://developmentseed.org/blog/2011/09/09/jekyll-github-pages/>
+* Jekyll-Bootstrap: [Code](https://github.com/plusjade/jekyll-bootstrap) | [Documentation](http://jekyllbootstrap.com/developers/index.html)
