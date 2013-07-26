@@ -1,8 +1,5 @@
 ---
 published: true
----
-
----
 title: Jekyll Liquid Tag Sort Examples
 layout: post
 tags: jekyll, liquid, programming, web
