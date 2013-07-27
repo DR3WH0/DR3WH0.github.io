@@ -1,10 +1,13 @@
 ---
+category: DR3WH0
 published: true
 layout: post
 title: LastFm AutoResume
+tags: lastfm automation ubuntu
+description: Instructions for auto-resuming the Last.fm Web radio service.
 ---
 
-Ubuntu 10.04 Instructions (substitute any number of automated mouse click softwares for a different OS)
+Ubuntu 10.04 (substitute any number of automated mouse click softwares for a different OS)
 
 1. Install KAutoClick from the Software Center
 2. Start the LastFm Web service with your favorite station
