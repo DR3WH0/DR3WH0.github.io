@@ -1,0 +1,69 @@
+# This is the default format. 
+# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink: /:categories/:year/:month/:day/:title 
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+auto: true
+pygments: true
+
+# paginate: 7
+# paginate_path: "posts.html/page:num"
+
+production_url : http://drewhop.github.io
+
+# All Jekyll-Bootstrap specific configurations are namespaced into this hash
+#
+JB :
+  version : 0.3.0
+  BASE_PATH : false
+
+  # These paths are to the main pages Jekyll-Bootstrap ships with.
+  # Some JB helpers refer to these paths; change them here if needed.
+  #
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html  
+  
+  # Settings for all other include helpers can be defined by creating 
+  # a hash with key named for the given helper. ex:
+  #
+  #   pages_list :
+  #     provider : "custom"   
+  #
+  # Setting any helper's provider to 'custom' will bypass the helper code
+  # and include your custom code. Your custom file must be defined at:
+  #   ./_includes/custom/[HELPER]
+  # where [HELPER] is the name of the helper you are overriding.
+
+# Prose.io Configuration
+#
+markdown: rdiscount
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://drewhop.github.io/'
+#  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+#  media: 'media'
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: "hidden"
+          value: "true"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          value: ""
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "DR3WH0"
