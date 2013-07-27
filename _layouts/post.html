@@ -5,5 +5,19 @@ layout: default
 <article>
 <h2>{{page.title}}</h2>
 <hr/>
+
+{% if page.description %}
+<ul><p class="view">{{ page.description }}</p></ul>
+<hr/>
+{% endif %}
+
 {{content}}
 </article>
+<hr/>
+
+{% include JB/setup %}
+<ul class="tag_box inline">
+  {% assign tags_list = page.tags %}  
+  {% include JB/tags_list %}
+</ul>
+
