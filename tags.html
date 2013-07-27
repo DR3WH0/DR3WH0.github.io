@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tags
+---
+
+<h2>Tags</h2>
+<hr/>
+
+{% include JB/setup %}
+
+<ul class="tag_box inline">
+  {% assign tags_list = site.tags %}  
+  {% include JB/tags_list %}
+</ul>
+<hr/>
+
+{% capture get_items %}
+  {% for tag in site.tags %}
+    {{ tag | first }}
+  {% endfor %}
+{% endcapture %}
+
+{% capture num_words %}
+  {{ get_items | split:' ' | sort | join:' ' | number_of_words }}
+{% endcapture %}
+
+{% for item in (1..num_words) %}
+  {% capture this_word %}
+    {{ get_items | split:' ' | sort | join:' ' | truncatewords:item | remove:'...' | split:' ' | last }}
+  {% endcapture %}
+  {% assign display_word = this_word|strip_html|remove:' '|strip_newlines %}
+  <h3 id="{{ display_word }}-ref">{{ display_word }}</h3>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.tags contains display_word %}
+        <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
