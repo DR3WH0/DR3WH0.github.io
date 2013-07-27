@@ -1,5 +1,5 @@
 ---
-category: dr3wh0
+category: DR3WH0
 published: true
 layout: post
 title: GitHub Pages Reference
