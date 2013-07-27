@@ -1,12 +1,16 @@
 ---
-published: true
 layout: default
 title: Blog
 ---
 
 <h2>Recent Thoughts</h2>
 <hr/>
+
 {% for post in site.posts limit:7 %}
   <small>{{ post.date | date_to_string }}</small>
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <h2><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
 {% endfor %}
+
+<footer>
+  <h4><a href="/archive.html" title="Thought Archive">MORE THOUGHTS &gt;&gt;&gt;</a></h4>
+</footer>
