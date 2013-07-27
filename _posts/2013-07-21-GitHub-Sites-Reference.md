@@ -2,6 +2,8 @@
 published: true
 layout: post
 title: GitHub Pages Reference
+tags: jekyll liquid github prose markdown
+description: A collection of links for getting started with Jekyll in GitHub Pages.
 ---
 
 * Jekyll Variables: <http://jekyllrb.com/docs/variables/>
