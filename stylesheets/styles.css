@@ -233,6 +233,10 @@ footer {
   bottom:50px;
 }
 
+footer p {
+  margin:0 0 10px;
+}
+
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
