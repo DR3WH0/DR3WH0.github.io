@@ -47,7 +47,8 @@ prose:
     _posts:
       - name: "published"
         field:
-          element: "hidden"
+          element: "checkbox"
+          label: "Publish"
           value: "true"
       - name: "layout"
         field:
