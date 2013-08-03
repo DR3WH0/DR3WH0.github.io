@@ -4,7 +4,7 @@ layout: post
 published: true
 title: Orphaned Baby Bunnies
 tags: animals rabbits dogs
-description: Cocoa raids a nest of newborn rabbits in my back yard. I lament.
+description: Cocoa raids a nest of newborn rabbits in my back yard. I lament a missed opportunity.
 ---
 
 Something told me to go outside with Cocoa this morning and spend time with her in the yard. I usually just let her out for awhile to sniff and do her business, and this morning was no different, with the exception of that nagging hunch. I should have listened.
