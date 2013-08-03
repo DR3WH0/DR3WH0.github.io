@@ -3,7 +3,7 @@ category: DR3WH0
 layout: post
 published: true
 title: Baby Bunnies (R.I.P.)
-tags: animals rabbits dogs
+tags: animals rabbits dogs cocoa
 description: Cocoa raids a nest of newborn rabbits in my back yard. I lament a missed opportunity.
 ---
 
