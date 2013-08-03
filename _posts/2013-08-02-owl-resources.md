@@ -16,6 +16,10 @@ description: A collection of links for getting started with OWL ontology develop
 * [Ontology 101](https://dl.dropboxusercontent.com/u/8239797/ontology101.pdf)
 * [Description Logic Primer](https://dl.dropboxusercontent.com/u/8239797/1201.4089v3.pdf) ([Source](http://arxiv.org/abs/1201.4089))
 
+### Books
+
+* [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/)
+
 ### Software
 
 * [Protege Documentation](http://protege.stanford.edu/doc/users.html) | [Protege Wiki](http://protegewiki.stanford.edu/wiki/Main_Page)
