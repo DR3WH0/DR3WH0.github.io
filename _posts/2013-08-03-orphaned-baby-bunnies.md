@@ -15,6 +15,6 @@ As I got closer, she was very interested in a depression in the ground with some
 
 Sure enough, as soon as Cocoa got in the house she started to do that unpleasant thing that signals imminent digestive distress. I let her out again and discovered three tiny rabbits among the dog food and rawhide she had for breakfast. 
 
-Many apologies for the gross-out factor of this post, but I feel really bad that I was unable to help those newborn bunnies and their momma. Dogs will be dogs, and cats will be cats, and I've seen my fair share of unfortunate baby birds and bunnies over the years. It would have been cool (even if only just this once) to watch a nest of rabbits grow up in a week or two in the middle of my back yard.
+Many apologies for the gross-out factor of this post, but I feel really bad that I failed to help those newborn bunnies and their momma. Dogs will be dogs, and cats will be cats, and I've seen my fair share of unfortunate baby birds and bunnies over the years. It would have been cool (even if only just this once) to watch a nest of rabbits grow up in the middle of my back yard.
 
 ### [Orphaned Baby Bunnies: Wild and Domestic](http://rabbit.org/faq-orphaned-baby-bunnies/)
