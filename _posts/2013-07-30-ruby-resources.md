@@ -30,3 +30,5 @@ description: A collection of links to Ruby documentation.
 
 * [RubyGems User Guide](http://docs.rubygems.org/read/book/1)
 * [RailsGuides](http://guides.rubyonrails.org/index.html)
+* Sinatra: [README](http://www.sinatrarb.com/intro.html) | [Documentation](http://www.sinatrarb.com/documentation.html)
+* Camping: [Book](http://camping.io/The-Camping-Book) | [Reference](http://camping.io/api/)
