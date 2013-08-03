@@ -2,7 +2,7 @@
 category: DR3WH0
 layout: post
 published: true
-title: Orphaned Baby Bunnies
+title: Wild Baby Bunnies
 tags: animals rabbits dogs
 description: Cocoa raids a nest of newborn rabbits in my back yard. I lament a missed opportunity.
 ---
