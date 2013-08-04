@@ -19,6 +19,7 @@ description: A collection of links for getting started with OWL ontology develop
 ### Books
 
 * [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/)
+* [Semantic Web for the Working Ontologist](https://dl.dropboxusercontent.com/u/8239797/pdf22.pdf)
 
 ### Software
 
