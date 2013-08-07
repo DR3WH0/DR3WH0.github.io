@@ -20,6 +20,7 @@ description: A collection of links to Ruby documentation.
 
 ### Books
 
+* [Ruby in a Nutshell](https://dl.dropboxusercontent.com/u/8239797/ruby_in_a_nutshell.pdf)
 * [The Book of Ruby](https://dl.dropboxusercontent.com/u/8239797/the_book_of_ruby.pdf)
 * [Ruby Best Practices](https://dl.dropboxusercontent.com/u/8239797/rbp_1-0.pdf)
 * [Roby Cookbook](https://dl.dropboxusercontent.com/u/8239797/RubyCookbook_0245.pdf)
