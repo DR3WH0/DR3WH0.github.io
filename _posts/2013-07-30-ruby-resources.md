@@ -26,6 +26,7 @@ description: A collection of links to Ruby documentation.
 * [Ruby Cookbook](https://dl.dropboxusercontent.com/u/8239797/RubyCookbook_0245.pdf)
 * [Practical Ruby Projects](https://dl.dropboxusercontent.com/u/8239797/Cyll%20-%20Practical%20Ruby%20Projects.pdf)
 * [Build Awesome Command Line Applications in Ruby](https://dl.dropboxusercontent.com/u/8239797/build_awesome_command-line_applications_in_ruby.pdf)
+* [Everyday Scripting with Ruby](https://dl.dropboxusercontent.com/u/8239797/everyday_scripting_with_ruby.pdf)
 
 ### Reference
 
