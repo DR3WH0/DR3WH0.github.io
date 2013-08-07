@@ -23,8 +23,9 @@ description: A collection of links to Ruby documentation.
 * [Ruby in a Nutshell](https://dl.dropboxusercontent.com/u/8239797/ruby_in_a_nutshell.pdf)
 * [The Book of Ruby](https://dl.dropboxusercontent.com/u/8239797/the_book_of_ruby.pdf)
 * [Ruby Best Practices](https://dl.dropboxusercontent.com/u/8239797/rbp_1-0.pdf)
-* [Roby Cookbook](https://dl.dropboxusercontent.com/u/8239797/RubyCookbook_0245.pdf)
+* [Ruby Cookbook](https://dl.dropboxusercontent.com/u/8239797/RubyCookbook_0245.pdf)
 * [Practical Ruby Projects](https://dl.dropboxusercontent.com/u/8239797/Cyll%20-%20Practical%20Ruby%20Projects.pdf)
+* [Build Awesome Command Line Applications in Ruby](https://dl.dropboxusercontent.com/u/8239797/build_awesome_command-line_applications_in_ruby.pdf)
 
 ### Reference
 
