@@ -18,6 +18,13 @@ description: A collection of links to Ruby documentation.
 * [Ruby Monk](http://rubymonk.com/)
 * [Ruby Essentials](http://www.techotopia.com/index.php/Ruby_Essentials)
 
+### Books
+
+* [The Book of Ruby](https://dl.dropboxusercontent.com/u/8239797/the_book_of_ruby.pdf)
+* [Ruby Best Practices](https://dl.dropboxusercontent.com/u/8239797/rbp_1-0.pdf)
+* [Roby Cookbook](https://dl.dropboxusercontent.com/u/8239797/RubyCookbook_0245.pdf)
+* [Practical Ruby Projects](https://dl.dropboxusercontent.com/u/8239797/Cyll%20-%20Practical%20Ruby%20Projects.pdf)
+
 ### Reference
 
 * [Ruby Wiki](http://en.wikibooks.org/wiki/Ruby_programming_language)
