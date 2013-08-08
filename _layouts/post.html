@@ -7,8 +7,10 @@ layout: default
 <hr/>
 
 {% if page.description %}
+  {% unless page.tags contains "haiku" %}
 <ul><p class="view">{{ page.description }}</p></ul>
 <hr/>
+  {% endunless %}
 {% endif %}
 
 {{content}}
