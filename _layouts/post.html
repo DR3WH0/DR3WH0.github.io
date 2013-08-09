@@ -3,18 +3,20 @@ layout: default
 ---
 
 <article>
-<h2>{{page.title}}</h2>
-<hr/>
+  <h2>{{page.title}}</h2>
+  <hr/>
 
-{% if page.description %}
-  {% unless page.tags contains "haiku" %}
-<ul><p class="view">{{ page.description }}</p></ul>
-<hr/>
-  {% endunless %}
-{% endif %}
+  {% if page.description %}
+    {% unless page.tags contains "haiku" %}
+      <ul><p class="view">{{ page.description }}</p></ul>
+      <hr/>
+    {% endunless %}
+  {% endif %}
 
-{{content}}
+  {{content}}
 </article>
+
+<p style="text-align:right"><a href="/guestbook.html"><b>COMMENTS >>></b></a></p>
 <hr/>
 
 {% include JB/setup %}
