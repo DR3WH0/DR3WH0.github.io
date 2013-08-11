@@ -40,5 +40,5 @@ description: A collection of links to Ruby documentation.
 
 * [RubyGems User Guide](http://docs.rubygems.org/read/book/1)
 * [RailsGuides](http://guides.rubyonrails.org/index.html)
-* Sinatra: [README](http://www.sinatrarb.com/intro.html) | [Documentation](http://www.sinatrarb.com/documentation.html) | [Up & Running](https://dl.dropboxusercontent.com/u/8239797/sinatra_up_and_running.pdf)
+* Sinatra: [README](http://www.sinatrarb.com/intro.html) | [Documentation](http://www.sinatrarb.com/documentation.html) | [Up & Running](https://dl.dropboxusercontent.com/u/8239797/sinatra_up_and_running.pdf) | [Jump Start](https://dl.dropboxusercontent.com/u/8239797/jump_start_sinatra.pdf)
 * Camping: [Book](http://camping.io/The-Camping-Book) | [Reference](http://camping.io/api/)
