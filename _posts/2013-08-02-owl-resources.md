@@ -21,6 +21,7 @@ description: A collection of links for getting started with OWL ontology develop
 * [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/)
 * [Semantic Web for the Working Ontologist](https://dl.dropboxusercontent.com/u/8239797/pdf22.pdf)
 * [Practical RDF](https://dl.dropboxusercontent.com/u/8239797/Practical_RDF.pdf)
+* [Learning SPARQL](https://dl.dropboxusercontent.com/u/8239797/learning_sparql_2nd_edition.pdf)
 
 ### Software
 
