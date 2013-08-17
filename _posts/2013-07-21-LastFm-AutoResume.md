@@ -1,10 +1,10 @@
 ---
 category: DR3WH0
-published: true
 layout: post
+published: true
 title: LastFm AutoResume
 tags: lastfm automation ubuntu
-description: Instructions for auto-resuming the Last.fm Web radio service.
+description: "Instructions for auto-resuming the Last.fm Web radio service."
 ---
 
 Ubuntu 10.04 (substitute any number of automated mouse click softwares for a different OS)
@@ -17,4 +17,6 @@ Ubuntu 10.04 (substitute any number of automated mouse click softwares for a dif
 6. Move the mouse over the "Resume" button and leave it there
 7. KAutoClick automatically resumes the LastFm stream
 
-Note: readjust the LastFm window as necessary to avoid clicking other links
+Note: readjust the LastFm window as necessary to avoid clicking other links.
+
+Update (2013-08-17): I created created a more robust auto-resume method that's outlined [here](http://dr3wh0.github.io/dr3wh0/2013/08/17/lastfm-autoresume-part-2/).
