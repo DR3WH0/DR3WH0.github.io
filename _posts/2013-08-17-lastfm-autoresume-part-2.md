@@ -32,7 +32,7 @@ LastFm AutoResume:
 2. For best results with the new profile, install the [Adblock Plus](https://adblockplus.org/en/firefox) add-on, hide all toolbars, and deselect 'Always show the tab bar' in Preferences >> Tabs.
 3. If you want to scrobble to an existing Last.fm account, log in to [Last.fm](https://www.last.fm/login) in the new 'lastfm' profile, remain logged in (i.e. don't click the Logout link), and be sure to select 'Play music in-page' in the [Website Settings](http://www.last.fm/settings/website).
 4. After setting up the 'lastfm' profile, quit Firefox and switch back to the default profile with the Profile Manager.
-5. Run the lastfm-autoresume.rb script.
+5. Run the lastfm-autoresume.rb script. Place the script somewhere on your path for easiest use.
 6. Enter the name of the station you want to listen to. This can be an artist, tag, or track name.
 7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser until you click the pause button or close the window.
 
