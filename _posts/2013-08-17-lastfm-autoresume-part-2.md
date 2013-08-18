@@ -36,4 +36,4 @@ LastFm AutoResume:
 6. Enter the name of the station you want to listen to. This can be an Artist, Tag, or Track name.
 7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser until you click the pause button or close the window.
 
-Give me a shout [here](http://www.last.fm/user/DR3WH0), or [here](https://gist.github.com/DR3WH0/6259121), or leave a [comment](http://dr3wh0.github.io/guestbook.html) if you find this useful.
+Give me a shout [here](http://www.last.fm/user/DR3WH0), or [here](https://gist.github.com/DR3WH0/6259121#file-lastfm-autoresume-rb), or leave a [comment](http://dr3wh0.github.io/guestbook.html) if you find this useful.
