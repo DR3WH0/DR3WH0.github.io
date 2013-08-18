@@ -34,6 +34,6 @@ LastFm AutoResume:
 4. After setting up the 'lastfm' profile, quit Firefox and switch back to the default profile with the Profile Manager.
 5. Run the lastfm-autoresume.rb script. Place the script in your home folder or somewhere on your path for easiest use.
 6. Enter the name of the station you want to listen to. This can be an Artist, Tag, or Track name.
-7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser until you click the pause button or close the window.
+7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser.
 
 Give me a shout [here](http://www.last.fm/user/DR3WH0), or [here](https://gist.github.com/DR3WH0/6259121#file-lastfm-autoresume-rb), or leave a [comment](http://dr3wh0.github.io/guestbook.html) if you find this useful.
