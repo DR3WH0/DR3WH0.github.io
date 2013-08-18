@@ -19,7 +19,13 @@ In a [previous post](http://dr3wh0.github.io/dr3wh0/2013/07/21/LastFm-AutoResume
 **Instructions**
 
 1. Set up your 'lastfm' Firefox profile with the Profile Manager:
-    firefox -P
-2. For best results with the new profile, install the [Adblock Plus](https://adblockplus.org/en/firefox) add-on, hide all toolbars, and deselect 'Always show the tab bar' in Preferences.
-3. If you want to scrobble to an existing Last.fm account, log in to [Last.fm](https://last.fm/login) in the new 'lastfm' Firefox profile, remain logged in, and be sure to select 'Play music in-page' in the [Website Settings](http://www.last.fm/settings/website).
 
+    firefox -P
+
+2. For best results with the new profile, install the [Adblock Plus](https://adblockplus.org/en/firefox) add-on, hide all toolbars, and deselect 'Always show the tab bar' in Preferences >> Tabs.
+3. If you want to scrobble to an existing Last.fm account, log in to [Last.fm](https://www.last.fm/login) in the new 'lastfm' profile, remain logged in (i.e. don't click the Logout link), and be sure to select 'Play music in-page' in the [Website Settings](http://www.last.fm/settings/website).
+4. After setting up the 'lastfm' profile, quit Firefox and switch back to the default profile with the Profile Manager:
+
+    firefox -P
+
+5. 
