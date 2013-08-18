@@ -11,7 +11,7 @@ In a [previous post](http://dr3wh0.github.io/dr3wh0/2013/07/21/LastFm-AutoResume
 
 **Requirements**
 
-* [lastfm-autoresume.rb](https://gist.github.com/DR3WH0/6259121)
+* [lastfm-autoresume.rb](https://gist.github.com/DR3WH0/6259121#file-lastfm-autoresume-rb)
 * [Ruby](http://www.ruby-lang.org/en/) 1.9.2 or higher
 * [selenium-webdriver gem](http://rubygems.org/gems/selenium-webdriver)
 * [Firefox](http://www.mozilla.org/en-US/firefox/new/) and a [profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data) called 'lastfm'
