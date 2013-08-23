@@ -13,7 +13,7 @@ You can see it in action on my Twitter feed: <https://twitter.com/DR3WH0>
 
 **Features**
 
-* Load Last.fm radio from the command line
+* Load Last.fm web radio from the command line
 * Auto-resume free Last.fm radio
 * Tweet each track after it's played, including: time, track name, artist, link to Last.fm track page, and top 3 track tags
 * Tweet Last.fm free MP3 downloads link when a downloadable track is played
