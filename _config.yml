@@ -39,7 +39,7 @@ JB :
 #
 markdown: rdiscount
 prose:
-  rooturl: '/_posts'
+  rooturl: '_posts'
   siteurl: 'http://DR3WH0.github.io/'
 #  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
 #  media: 'media'
