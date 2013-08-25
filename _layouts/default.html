@@ -2,19 +2,19 @@
 tracks:
   - track:
     - name: 'Aphex Twin - Avril 14th'
-    - url: 'http://www.youtube.com/watch?v=MBFXJw7n-fU'
+      url: 'http://www.youtube.com/watch?v=MBFXJw7n-fU'
   - track:
     - name: 'Low - Fearless (P.Floyd Cover)'
-    - url: 'http://www.youtube.com/watch?v=2LyEcWxI3UQ'
+      url: 'http://www.youtube.com/watch?v=2LyEcWxI3UQ'
   - track:
     - name: 'Radiohead Acoustic Collection'
-    - url: 'http://www.youtube.com/watch?v=qDK0ZxVBHoA'
+      url: 'http://www.youtube.com/watch?v=qDK0ZxVBHoA'
   - track:
     - name: 'Stars Of The Lid - December Hunting'
-    - url: 'http://www.youtube.com/watch?v=u-MXZDkcPKM'
+      url: 'http://www.youtube.com/watch?v=u-MXZDkcPKM'
   - track:
     - name: 'Abfarhrt Hinwil - Radiowellen'
-    - url: 'http://t.co/JrzTapEmhw'
+      url: 'http://t.co/JrzTapEmhw'
 ---
 <!-- {'title':'Aphex Twin - Avril 14th','url':'http://www.youtube.com/watch?v=MBFXJw7n-fU'},{'title':'Low - Fearless (P.Floyd Cover)','url':'http://www.youtube.com/watch?v=2LyEcWxI3UQ'},{'title':'Radiohead Acoustic Collection','url':'http://www.youtube.com/watch?v=qDK0ZxVBHoA'},{'title':'Stars Of The Lid - December Hunting ','url':'http://www.youtube.com/watch?v=u-MXZDkcPKM'},{'title':'Abfarhrt Hinwil - Radiowellen','url':'http://t.co/JrzTapEmhw'}  -->
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ tracks:
   <body>
     <!-- SCM Music Player http://scmplayer.net -->
     <script type="text/javascript" src="http://scmplayer.net/script.js" 
-      data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{% for track in page.tracks %}{'title':'{{track.name}}','url':'{{track.url}}'}{% unless track.last %},{% endunless %}{% endfor %}]}"></script>
+      data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{% for track in page.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless track.last %},{% endunless %}{% endfor %}]}"></script>
     <!-- SCM Music Player script end -->
 
     <div class="wrapper">
