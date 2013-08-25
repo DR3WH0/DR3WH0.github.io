@@ -12,8 +12,8 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
   </head>
   <body>
-    <!-- SCM Music Player http://scmplayer.net -->
-    <script type="text/javascript" src="http://scmplayer.net/script.js" 
+    <!-- SCM Music Player http://scmplayer.net
+    <script type="text/javascript" src="/script.js" 
       data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}"></script>
     <!-- SCM Music Player script end -->
 
