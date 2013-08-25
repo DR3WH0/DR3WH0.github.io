@@ -70,19 +70,14 @@ prose:
           value: "DR3WH0"
 
 tracks :
-  track :
-    name : "Aphex Twin - Avril 14th"
+  - name : "Aphex Twin - Avril 14th"
     url : "http://www.youtube.com/watch?v=MBFXJw7n-fU"
-  track :
-    name : "Low - Fearless (P.Floyd Cover)"
+  - name : "Low - Fearless (P.Floyd Cover)"
     url : "http://www.youtube.com/watch?v=2LyEcWxI3UQ"
-  track :
-    name : "Radiohead Acoustic Collection"
+  - name : "Radiohead Acoustic Collection"
     url : "http://www.youtube.com/watch?v=qDK0ZxVBHoA"
-  track :
-    name : Stars Of The Lid - December Hunting
+  - name : Stars Of The Lid - December Hunting
     url : http://www.youtube.com/watch?v=u-MXZDkcPKM
-  track :
-    name : Abfarhrt Hinwil - Radiowellen
+  - name : Abfarhrt Hinwil - Radiowellen
     url : http://t.co/JrzTapEmhw
 
