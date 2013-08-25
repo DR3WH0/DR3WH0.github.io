@@ -47,26 +47,26 @@ prose:
     _posts:
       - name: "published"
         field:
-          element: "checkbox"
+        - element: "checkbox"
           label: "Publish"
           value: "true"
       - name: "layout"
         field:
-          element: "hidden"
+        - element: "hidden"
           value: "post"
       - name: "title"
         field:
-          element: "text"
+        - element: "text"
           label: "Title"
           value: ""
       - name: "tags"
         field:
-          element: "text"
+        - element: "text"
           label: "Tags"
           value: ""
       - name: "category"
         field:
-          element: "hidden"
+        - element: "hidden"
           value: "DR3WH0"
 
 tracks:
