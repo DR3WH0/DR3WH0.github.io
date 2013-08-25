@@ -76,13 +76,13 @@ tracks :
   - track :
     - name : "Low - Fearless (P.Floyd Cover)"
       url : "http://www.youtube.com/watch?v=2LyEcWxI3UQ"
-  - track :
-    - name : "Radiohead Acoustic Collection"
-      url : "http://www.youtube.com/watch?v=qDK0ZxVBHoA"
-  - track :
-    - name : Stars Of The Lid - December Hunting
-      url : http://www.youtube.com/watch?v=u-MXZDkcPKM
-  - track :
-    - name : Abfarhrt Hinwil - Radiowellen
-      url : http://t.co/JrzTapEmhw
+  track :
+    name : "Radiohead Acoustic Collection"
+    url : "http://www.youtube.com/watch?v=qDK0ZxVBHoA"
+  track :
+    name : Stars Of The Lid - December Hunting
+    url : http://www.youtube.com/watch?v=u-MXZDkcPKM
+  track :
+    name : Abfarhrt Hinwil - Radiowellen
+    url : http://t.co/JrzTapEmhw
 
