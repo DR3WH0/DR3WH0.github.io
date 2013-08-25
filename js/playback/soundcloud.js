@@ -23,3 +23,4 @@ define(['scm','playback/soundmanager!','jquery'],function(SCM,sm,$){
 		}
 	};
 });
+

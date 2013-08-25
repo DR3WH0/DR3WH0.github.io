@@ -32,3 +32,4 @@ define(['jquery','song'],function($,Song){
 		}
 	}
 });
+
