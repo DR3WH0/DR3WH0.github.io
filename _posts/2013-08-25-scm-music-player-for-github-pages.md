@@ -19,7 +19,7 @@ In a web browser, navigate to the SCM Player's index.html page on your site (in 
 
 The Javascript for the playlists can get a bit unwieldy, and I didn't want to walk through the SCM wizard to get new code every time I wanted to make a change. Liquid & YAML to the rescue!
 
-Replace the playlist code in the default layout with the Liquid code below. If you want to save the playlist you created with the SCM wizard, be sure to save that code somewhere. I've broken up the Liquid into logical chunks for readability, but you should put all of the code on one line at the end of the SCM script's config attribute.
+Replace the playlist code in the default layout with the Liquid code below. If you want to save the playlist you created with the SCM wizard, be sure to save that code somewhere. I've broken up the Liquid into logical chunks for readability, but you should put all of the code [on one line](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_layouts/default.html#L17) at the end of the config attribute.
 
     'playlist':[
       <% for track in site.tracks %>
@@ -27,13 +27,13 @@ Replace the playlist code in the default layout with the Liquid code below. If y
         <% unless forloop.last %>,<% endunless %>
       <% endfor %>]
 
-Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml). Use the following template to record your playlist:
+Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml). Use the following template to manage your playlist:
 
     tracks:
       - name:
         url:
 
-Add new _name:_ and _url:_ lines for each track. Be sure to include the dash, as indicated above, before each _name:_ because Liquid uses that to identify each new track in the for loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
+Add new **_name:_** and **_url:_** lines for each track. Be sure to include the dash, as indicated above, before each _name:_ because Liquid uses that to identify each new track in the for loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
 
 **Further Reading**
 
