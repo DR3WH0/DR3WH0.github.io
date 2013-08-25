@@ -4,7 +4,7 @@ layout: post
 published: true
 title: SCM Music Player for GitHub Pages
 tags: music javascript liquid yaml github
-description: Instructions for installing the SCM Music Player on GitHub Pages.
+description: "Instructions for installing the SCM Music Player on GitHub Pages. Includes code for generating playlists with Liquid & YAML."
 ---
 
 Stumbled upon a cool little gadget called the [SCM Music Player](http://scmplayer.net/) that I just added to the site. The default install is remotely hosted, but I chose to install locally on GitHub Pages to take advantage of Liquid & YAML for easy playlists.
