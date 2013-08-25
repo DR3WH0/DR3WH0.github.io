@@ -155,7 +155,8 @@ $(function() {
   });
   
   // Replace ERB-style Liquid tags in highlighted code blocks...
-  replaceERBTags($('div.highlight').find('code.text'));
+//  replaceERBTags($('div.highlight').find('code.text'));
+  replaceERBTags($('pre').find('code'));
   // ... and in inline code
   replaceERBTags($('p code'));
 });
