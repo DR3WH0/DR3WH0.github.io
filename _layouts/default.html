@@ -12,9 +12,13 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
   </head>
   <body>
-    <!-- SCM Music Player http://scmplayer.net 
+    <!-- remote SCM Music Player http://scmplayer.net 
     <script type="text/javascript" src="/script.js" 
       data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}"></script>
+    <!-- remote SCM Music Player script end -->
+    <!-- SCM Music Player http://scmplayer.net -->
+        <script type="text/javascript" src="http://dr3wh0.github.io/musicplayer/script.js" 
+        data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}" ></script>
     <!-- SCM Music Player script end -->
 
     <div class="wrapper">
