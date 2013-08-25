@@ -22,10 +22,10 @@ The Javascript for the playlists can get a bit unwieldy, and I didn't want to wa
 Replace the playlist code in the default layout with the Liquid code below. If you want to save the playlist you created with the SCM wizard, be sure to save that code somewhere. I've broken up the Liquid into logical chunks for readability, but you should put all of the code on one line at the end of the SCM script's config attribute.
 
     'playlist':[
-      {% for track in site.tracks %}
-        {'title':'{{ track.name }}','url':'{{ track.url }}'}
-        {% unless forloop.last %},{% endunless %}
-      {% endfor %}]
+      <% for track in site.tracks %>
+        {'title':'<%= track.name %>','url':'<%= track.url %>'}
+        <% unless forloop.last %>,<% endunless %>
+      <% endfor %>]
 
 Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml). Use the following template to record your playlist:
 
