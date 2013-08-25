@@ -71,14 +71,14 @@ prose:
 
 tracks :
   - track :
-    - name : Aphex Twin - Avril 14th
-      url : http://www.youtube.com/watch?v=MBFXJw7n-fU
+    - name : "Aphex Twin - Avril 14th"
+      url : "http://www.youtube.com/watch?v=MBFXJw7n-fU"
   - track :
-    - name : Low - Fearless (P.Floyd Cover)
-      url : http://www.youtube.com/watch?v=2LyEcWxI3UQ
+    - name : "Low - Fearless (P.Floyd Cover)"
+      url : "http://www.youtube.com/watch?v=2LyEcWxI3UQ"
   - track :
-    - name : Radiohead Acoustic Collection
-      url : http://www.youtube.com/watch?v=qDK0ZxVBHoA
+    - name : "Radiohead Acoustic Collection"
+      url : "http://www.youtube.com/watch?v=qDK0ZxVBHoA"
   - track :
     - name : Stars Of The Lid - December Hunting
       url : http://www.youtube.com/watch?v=u-MXZDkcPKM
