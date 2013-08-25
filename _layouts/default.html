@@ -14,7 +14,7 @@
   <body>
     <!-- SCM Music Player http://scmplayer.net -->
     <script type="text/javascript" src="http://scmplayer.net/script.js" 
-      data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}"></script>
+      data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}"></script>
     <!-- SCM Music Player script end -->
 
     <div class="wrapper">
