@@ -7,7 +7,6 @@ tags: github git
 description: Frequently Used Git Commands
 ---
 
-
 **Update Cloned Repo**
 
     git pull
@@ -23,3 +22,12 @@ description: Frequently Used Git Commands
 **Push Commit**
 
     git push
+
+**Remove File on GitHub**
+
+    git rm /path/to/filename
+
+**Recursively Remove Directory on GitHub**
+
+    git rm -rf directoryname
+
