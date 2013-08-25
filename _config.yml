@@ -39,7 +39,7 @@ JB :
 #
 markdown: rdiscount
 prose:
-  rooturl: '_posts'
+  rooturl: '/_posts'
   siteurl: 'http://DR3WH0.github.io/'
 #  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
 #  media: 'media'
@@ -70,12 +70,12 @@ prose:
           value: "DR3WH0"
 
 tracks :
-  - name : "Aphex Twin - Avril 14th"
-    url : "http://www.youtube.com/watch?v=MBFXJw7n-fU"
-  - name : "Low - Fearless (P.Floyd Cover)"
-    url : "http://www.youtube.com/watch?v=2LyEcWxI3UQ"
-  - name : "Radiohead Acoustic Collection"
-    url : "http://www.youtube.com/watch?v=qDK0ZxVBHoA"
+  - name : Aphex Twin - Avril 14th
+    url : http://www.youtube.com/watch?v=MBFXJw7n-fU
+  - name : Low - Fearless (P.Floyd Cover)
+    url : http://www.youtube.com/watch?v=2LyEcWxI3UQ
+  - name : Radiohead Acoustic Collection
+    url : http://www.youtube.com/watch?v=qDK0ZxVBHoA
   - name : Stars Of The Lid - December Hunting
     url : http://www.youtube.com/watch?v=u-MXZDkcPKM
   - name : Abfarhrt Hinwil - Radiowellen
