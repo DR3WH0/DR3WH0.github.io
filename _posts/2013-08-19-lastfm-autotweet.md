@@ -7,7 +7,7 @@ tags: lastfm twitter automation ruby twurl webdriver
 description: Ruby script for tuning in to the free Last.fm radio service and automatically tweeting recent tracks. Provides uninterrupted listening and tweets download links for free tracks.
 ---
 
-Building on [LastFM AutoResume]({% post-url /dr3wh0/2013/08/17/lastfm-autoresume-part-2 %}), I wrote another Ruby script to automatically post recent tracks to Twitter. Many thanks to [statianzo](https://gist.github.com/statianzo/977704) for his code that helped me puzzle out the [Last.fm API](http://www.last.fm/api/intro) and [XML-Simple](http://xml-simple.rubyforge.org/).
+Building on [LastFM AutoResume](http://dr3wh0.net/dr3wh0/2013/08/17/lastfm-autoresume-part-2), I wrote another Ruby script to automatically post recent tracks to Twitter. Many thanks to [statianzo](https://gist.github.com/statianzo/977704) for his code that helped me puzzle out the [Last.fm API](http://www.last.fm/api/intro) and [XML-Simple](http://xml-simple.rubyforge.org/).
 
 You can see it in action on my Twitter feed: <https://twitter.com/DR3WH0>
 
