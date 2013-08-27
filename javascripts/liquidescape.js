@@ -80,7 +80,7 @@ var layoutResultsPage = function(property, value, posts) {
   
   // Update the header
   var str = majusculeFirst(property) + " Listing for ‘" + majusculeFirst(value) + '’';
-  $container.find('h1').text(str);
+  $container.find('h2').text(str);
   
   // Loop through each post to format it
   for (var i in posts) {
