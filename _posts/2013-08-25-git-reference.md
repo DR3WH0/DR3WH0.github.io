@@ -7,6 +7,8 @@ tags: github git
 description: Frequently Used Git Commands
 ---
 
+**[Git Reference](http://gitref.org/index.html)** - Documentation by the GitHub crew.
+
 **Update Cloned Repo**
 
     git pull
@@ -30,4 +32,3 @@ description: Frequently Used Git Commands
 **Recursively Remove Directory on GitHub**
 
     git rm -rf directoryname
-
