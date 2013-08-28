@@ -3,7 +3,7 @@ category: DR3WH0
 layout: post
 published: true
 title: LastFm AutoResume
-tags: lastfm automation ubuntu
+tags: lastfm automation ubuntu music
 description: "Instructions for auto-resuming the Last.fm Web radio service."
 ---
 
