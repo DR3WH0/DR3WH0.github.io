@@ -94,10 +94,10 @@ var layoutResultsPage = function(property, value, posts) {
     tagsList += '</ul>';
     
     var post = posts[i];
-    var desc = 'title=""';
-    if (posts[i].description !== null) {
-      desc = 'title="' + posts[i].description + '"';
-    }
+    var desc = 'title="' + posts[i].description + '"';
+    // if (posts[i].description !== null) {
+    //   desc = 'title="' + posts[i].description + '"';
+    // }
     $container.find('ul.results').append(
       '<li>'
         // Page anchor
