@@ -95,8 +95,8 @@ var layoutResultsPage = function(property, value, posts) {
     
     var post = posts[i];
     var desc = 'title=""';
-    if (post.description !== null) {
-      desc = 'title="' + post.description + '"';
+    if (posts[i].description !== null) {
+      desc = 'title="' + posts[i].description + '"';
     }
     $container.find('ul.results').append(
       '<li>'
