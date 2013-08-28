@@ -1,3 +1,4 @@
+// Source Description: http://alexpearce.me/2012/04/simple-jekyll-searching/
 // Source Description: http://alexpearce.me/2012/04/escaping-liquid-tags-in-jekyll/
 // Source Code: https://github.com/alexpearce/alexpearce.github.com/blob/37f92f56e4cf85f96361f52baa523ab1dd900398/assets/js/alexpearce.js#L113
 
@@ -94,13 +95,11 @@ var layoutResultsPage = function(property, value, posts) {
     tagsList += '</ul>';
     
     var post = posts[i];
+    // added tooltip for post links DR3WH0
     var desc = 'title="' + posts[i].description + '"';
-    // if (posts[i].description !== null) {
-    //   desc = 'title="' + posts[i].description + '"';
-    // }
     $container.find('ul.results').append(
       '<li>'
-        // Page anchor
+        // Page anchor & tooltip
         + '<a href="' + post.href + '" ' + desc + '>'
         + posts[i].title
         + '</a>'
@@ -160,7 +159,7 @@ $(function() {
   
   // Replace ERB-style Liquid tags in highlighted code blocks...
 //  replaceERBTags($('div.highlight').find('code.text'));
-  replaceERBTags($('pre').find('code'));
+  replaceERBTags($('pre').find('code')); // modified html tags DR3WH0
   // ... and in inline code
   replaceERBTags($('p code'));
 });
