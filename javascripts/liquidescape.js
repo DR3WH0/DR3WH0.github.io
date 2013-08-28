@@ -105,7 +105,7 @@ var layoutResultsPage = function(property, value, posts) {
         + '</a>'
         // Post date
         + ' <span class="date"> &raquo; '
-        + posts[i].date
+        + posts[i].date.day + ' ' + posts[i].date.month + ' ' + posts[i].date.year
         + '</span>'
         // Tags
         + tagsList
