@@ -94,7 +94,7 @@ var layoutResultsPage = function(property, value, posts) {
     tagsList += '</ul>';
     
     var post = posts[i];
-    var desc = 'title=""'
+    var desc = 'title=""';
     if (post.description !== null) {
       desc = 'title="' + post.description + '"';
     }
