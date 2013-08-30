@@ -1,9 +1,9 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: Getting Started with Jekyll
 description: "CMS-Free Content Management with GitHub Pages"
+category: programming
 tags: jekyll github liquid
 ---
 
