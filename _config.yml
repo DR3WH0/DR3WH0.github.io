@@ -65,10 +65,18 @@ prose:
           label: "Tags"
           value: ""
       - name: "category"
+#        field:
+#          element: "text"
+#          label: "Category"
+#          value: "DR3WH0"
         field:
-          element: "text"
+          element: "select"
           label: "Category"
-          value: "DR3WH0"
+          options:
+            - name: "Music"
+              value: "music"
+            - name: "Programming"
+              value: "programming"
 
 tracks :
   - name : Aphex Twin - Avril 14th
