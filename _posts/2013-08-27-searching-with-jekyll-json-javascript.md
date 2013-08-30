@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: "Searching with Jekyll, JSON, & JavaScript"
+category: programming
 tags: jekyll liquid json javascript
 description: "How I added tag search results to this blog, or Standing on the Shoulders of Hackers."
 ---
