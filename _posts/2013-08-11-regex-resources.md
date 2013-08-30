@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: RegEx Resources
+category: programming
 tags: regex
 description: Links to resources on regular expressions.
 ---
