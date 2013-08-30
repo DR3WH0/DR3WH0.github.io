@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: LastFm AutoTweet
+category: programming
 tags: lastfm twitter automation ruby twurl webdriver music
 description: Ruby script for tuning in to the free Last.fm radio service and automatically tweeting recent tracks. Provides uninterrupted listening and tweets download links for free tracks.
 ---
