@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 published: true
 layout: post
 title: GitHub Pages Reference
+category: programming
 tags: jekyll liquid github prose markdown
 description: A collection of links for getting started with Jekyll in GitHub Pages.
 ---
