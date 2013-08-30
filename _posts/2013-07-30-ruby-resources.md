@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: Ruby Resources
+category: programming
 tags: ruby
 description: A collection of links to Ruby documentation.
 ---
