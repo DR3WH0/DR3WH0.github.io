@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: SCM Music Player for GitHub Pages
+category: programming
 tags: music javascript liquid yaml github
 description: "Instructions for installing the SCM Music Player on GitHub Pages. Includes code for generating playlists with Liquid & YAML."
 ---
