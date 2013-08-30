@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: OWL Resources
+category: programming
 tags: owl metadata
 description: A collection of links for getting started with OWL ontology development for the semantic web.
 ---
