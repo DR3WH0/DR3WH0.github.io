@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: Git Reference
+category: programming
 tags: github git
 description: Frequently Used Git Commands
 ---
