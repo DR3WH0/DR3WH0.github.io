@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: "Describing Archives: A Content Standard (DACS)"
+category: prose
 tags: metadata archives
 description: Download links for the first and second editions of the DACS archival description standard.
 ---
