@@ -67,6 +67,7 @@ prose:
       - name: "category"
         field:
           element: "text"
+          label: "Category"
           value: "DR3WH0"
 
 tracks :
