@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 published: true
 title: Jekyll Liquid Tag Sort Examples
 layout: post
+category: programming
 tags: jekyll liquid yaml
 description: Links to examples of YAML tag sorting with Liquid syntax in Jekyll.
 ---
