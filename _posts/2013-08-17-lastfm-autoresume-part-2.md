@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: LastFm AutoResume (Part 2)
+category: programming
 tags: lastfm automation ruby selenium webdriver firefox ubuntu music
 description: "Instructions for auto-resuming the free Last.fm Web service with Ruby and Firefox."
 ---
