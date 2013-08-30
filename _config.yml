@@ -68,8 +68,9 @@ prose:
         field:
           element: "select"
           label: "Category"
-          placeholder: "DR3WH0"
           options:
+            - name: "DR3WH0"
+              value: "dr3wh0"
             - name: "Music"
               value: "music"
             - name: "Programming"
