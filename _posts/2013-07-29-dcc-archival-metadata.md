@@ -1,8 +1,8 @@
 ---
-category: DR3WH0
 layout: post
 published: true
 title: "DCC - Archival Metadata"
+category: prose
 tags: metadata archives
 description: A reference manual for creating archival metadata.
 ---
