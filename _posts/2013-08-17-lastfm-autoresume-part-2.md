@@ -7,7 +7,7 @@ tags: lastfm automation ruby selenium webdriver firefox ubuntu music
 description: "Instructions for auto-resuming the free Last.fm Web service with Ruby and Firefox."
 ---
 
-In a [previous post](http://dr3wh0.github.io/2013/07/21/LastFm-AutoResume/), I outlined a rough method for auto-resuming the free Last.fm Web service. Today I wrote a more robust auto-resume solution with Ruby and Selenium-WebDriver. This was developed on a Ubuntu 10.04 box. Your mileage with other systems may vary.
+In a [previous post](http://dr3wh0.net/2013/07/21/LastFm-AutoResume/), I outlined a rough method for auto-resuming the free Last.fm Web service. Today I wrote a more robust auto-resume solution with Ruby and Selenium-WebDriver. This was developed on a Ubuntu 10.04 box. Your mileage with other systems may vary.
 
 **Requirements**
 
