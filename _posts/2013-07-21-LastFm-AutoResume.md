@@ -19,4 +19,4 @@ Ubuntu 10.04 (substitute any number of automated mouse click softwares for a dif
 
 Note: readjust the LastFm window as necessary to avoid clicking other links.
 
-Update (2013-08-17): I created created a more robust auto-resume method that's outlined [here](http://dr3wh0.github.io/dr3wh0/2013/08/17/lastfm-autoresume-part-2/).
+Update (2013-08-17): I created created a more robust auto-resume method that's outlined [here](http://dr3wh0.net/2013/08/17/lastfm-autoresume-part-2/).
