@@ -37,3 +37,5 @@ LastFm AutoResume:
 7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser.
 
 Update (2013-08-23): There is a "we collect data" privacy nag that shows up in Firefox until you dismiss it, including for each new profile. Be sure to dismiss that dialog by clicking the CHOOSE button with the 'lastfm' profile loaded in the Profile Manager. Otherwise it will appear every time you run LastFm AutoResume.
+
+Update (2013-08-30): I built on this application to produce [lastfm-autotweet](http://dr3wh0.net/2013/08/19/lastfm-autotweet), which also posts listened tracks to Twitter.
