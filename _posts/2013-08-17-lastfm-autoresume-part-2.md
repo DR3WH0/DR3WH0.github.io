@@ -7,7 +7,7 @@ tags: lastfm automation ruby selenium webdriver firefox ubuntu music
 description: "Instructions for auto-resuming the free Last.fm Web service with Ruby and Firefox."
 ---
 
-In a [previous post](http://dr3wh0.github.io/dr3wh0/2013/07/21/LastFm-AutoResume/), I outlined a rough method for auto-resuming the free Last.fm Web service. Today I wrote a more robust auto-resume solution with Ruby and Selenium-WebDriver. This was developed on a Ubuntu 10.04 box. Your mileage with other systems may vary.
+In a [previous post](http://dr3wh0.github.io/2013/07/21/LastFm-AutoResume/), I outlined a rough method for auto-resuming the free Last.fm Web service. Today I wrote a more robust auto-resume solution with Ruby and Selenium-WebDriver. This was developed on a Ubuntu 10.04 box. Your mileage with other systems may vary.
 
 **Requirements**
 
@@ -35,7 +35,5 @@ LastFm AutoResume:
 5. Run the lastfm-autoresume.rb script. Place the script in your home folder or somewhere on your path for easiest use.
 6. Enter the name of the station you want to listen to. This can be an Artist, Tag, or Track name.
 7. Enter 'quit' when you want to end the AutoResume script. Last.fm will continue to play in the browser.
-
-Give me a shout [here](http://www.last.fm/user/DR3WH0), or [here](https://gist.github.com/DR3WH0/6259121#file-lastfm-autoresume-rb), or leave a [comment](http://dr3wh0.github.io/guestbook.html) if you find this useful.
 
 Update (2013-08-23): There is a "we collect data" privacy nag that shows up in Firefox until you dismiss it, including for each new profile. Be sure to dismiss that dialog by clicking the CHOOSE button with the 'lastfm' profile loaded in the Profile Manager. Otherwise it will appear every time you run LastFm AutoResume.
