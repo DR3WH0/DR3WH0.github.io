@@ -11,7 +11,7 @@ Stumbled upon a cool gadget called the [SCM Music Player](http://scmplayer.net/)
 
 **Local GitHub Pages Install**
 
-Just clone the [SCM-Music-Player](https://github.com/cshum/SCM-Music-Player) repository to a folder in your site. I downloaded a ZIP file, dragged the folder to to the site repo on my local machine, renamed the folder as [musicplayer](https://github.com/DR3WH0/DR3WH0.github.io/tree/master/musicplayer), and pushed the changes with [git](http://dr3wh0.github.io/2013/08/25/git-reference).
+Just clone the [SCM-Music-Player](https://github.com/cshum/SCM-Music-Player) repository to a folder in your site. I downloaded a ZIP file, dragged the folder to to the site repo on my local machine, renamed the folder as [musicplayer](https://github.com/DR3WH0/DR3WH0.github.io/tree/master/musicplayer), and pushed the changes with [git](http://dr3wh0.net/2013/08/25/git-reference).
 
 In a web browser, navigate to the SCM Player's index.html page on your site (in my case <http://dr3wh0.net/musicplayer/index.html>) and walk through the setup wizard. When you're finished, paste the widget code in your [default layout](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_layouts/default.html#L15-18) as directed by the setup wizard.
 
