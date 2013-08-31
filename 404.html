@@ -9,11 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body onLoad="setTimeout('delayer()', 7000)">
-    <!-- SCM Music Player http://scmplayer.net -->
-        <script type="text/javascript" src="http://dr3wh0.net/musicplayer/script.js" 
-        data-config="{'skin':'skins/simpleBlack/skin.css','volume':42,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,'playlist':[{% for track in site.tracks %}{'title':'{{ track.name }}','url':'{{ track.url }}'}{% unless forloop.last %},{% endunless %}{% endfor %}]}" ></script>
-    <!-- SCM Music Player script end -->
-
     <div class="wrapper">
       <header>
         <h1 class="default"><a href="/index.html" title="Recent Thoughts"><img src="https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png" alt="DR3WH0.png" height="42" width="42" /> DR3WH0</a></h1>
