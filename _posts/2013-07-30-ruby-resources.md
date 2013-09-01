@@ -17,6 +17,7 @@ description: A collection of links to Ruby documentation.
 * [Ruby Koans](http://rubykoans.com/)
 * [Ruby Monk](http://rubymonk.com/)
 * [Ruby Essentials](http://www.techotopia.com/index.php/Ruby_Essentials)
+* [Practicing Ruby Manuscripts](https://github.com/elm-city-craftworks/practicing-ruby-manuscripts/tree/master/articles/v1)
 
 ### Books
 
