@@ -27,7 +27,7 @@ Replace the playlist code in the default layout with the Liquid code below. If y
         <% unless forloop.last %>,<% endunless %>
       <% endfor %>]
 
-Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L72-74). Use the following template to manage your playlist:
+Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L92-94). Use the following template to manage your playlist:
 
     tracks :
       - name : track_name_here
