@@ -13,6 +13,7 @@ pygments: true
 production_url : http://dr3wh0.net
 
 # RSS Feed
+# https://github.com/snaptortoise/jekyll-rss-feeds
 name: DR3WH0
 description: Time Travel & Other Anomalies
 url: http://dr3wh0.net
