@@ -12,6 +12,11 @@ pygments: true
 
 production_url : http://dr3wh0.net
 
+# RSS Feed
+name: DR3WH0
+description: Time Travel & Other Anomalies
+url: http://dr3wh0.net
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
