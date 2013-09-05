@@ -2,15 +2,7 @@
 ---
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title> DR3WH0 {% if page.title %} | {{ page.title }} {% endif %} </title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" media="screen" charset="utf-8"/>
-    <link rel="icon" type="image/png" href="https://dl.dropboxusercontent.com/u/8239797/DR3WH0_favicon.png"/>
-    <script src="/javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
-  </head>
+  {% include head.html %}
   <body>
     <!-- SCM Music Player http://scmplayer.net -->
         <script type="text/javascript" src="http://dr3wh0.net/musicplayer/script.js" 
@@ -18,32 +10,14 @@
     <!-- SCM Music Player script end -->
 
     <div class="wrapper">
-      <header>
-        <h1 class="default"><a href="/index.html" title="Recent Thoughts"><img src="https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png" alt="DR3WH0.png" height="42" width="42" /> DR3WH0</a></h1>
-        <h3>Time Travel &amp; Other Anomalies</h3>
-        <p class="view"><a href="/archive.html" title="Thought Archive">Thoughts<small>the master list</small></a>
-        <p class="view"><a href="/tags.html" title="Tag List">Tags<small>idea graffiti</small></a>
-        <p class="view"><a href="/categories.html" title="Category List">Categories<small>idea herds</small></a>
-        <p class="view"><a href="http://dr3wh0.tumblr.com/" title="DR3WH0: Tumblr">Tumblr<small>daily back yard</small></a>
-        <p class="view"><a href="http://www.last.fm/user/DR3WH0" title="DR3WH0: Last.fm">Last.fm<small>favorite tunes</small></a>
-        <p class="view"><a href="https://twitter.com/DR3WH0" title="DR3WH0: Twitter">Twitter<small>realtime tunes</small></a>
-        <p class="view"><a href="http://www.flickr.com/photos/dr3wh0/"  title="DR3WH0: Flickr" target="tab">Flickr<small>lo-fi photography</small></a>
-      </header>
+      {% include header.html %}
       <section id="main">
         {{ content }}
       </section>
-      <footer>
-        <p>A <a href="https://github.com/DR3WH0/DR3WH0.github.io" title="Source Code on GitHub" target="tab">site</a> by <a href="http://andrewweidnerportfolio.weebly.com" title="Professional Portfolio" target="tab">A. Weidner</a><br />
-        <small><a href="http://statcounter.com/p9114352/?guest=1" title="StatCounter Statistics">DR3WH0 Statistics</a></small><br />
-        <script src="/javascripts/statcounter.js"></script>
-        <noscript><div class="statcounter">
-          <a title="website statistics" href="http://statcounter.com/" class="statcounter">
-          <img class="statcounter" src="http://c.statcounter.com/9114352/0/f55f8078/0/" alt="website statistics" /></a>
-        </div></noscript>&nbsp;<small><a href="/feed.xml">RSS Feed</a></small></p>
-      </footer>
+      {% include footer.html %}
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/liquidescape.js"></script>
-    <script src="/javascripts/analytics.js"></script>
+    <script type="text/javascript" src="/javascripts/analytics.js"></script>
   </body>
 </html>
