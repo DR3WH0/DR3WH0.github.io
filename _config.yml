@@ -88,6 +88,8 @@ prose:
               value: "programming"
             - name: "Prose"
               value: "prose"
+            - name: "Radio"
+              value: "radio"
 
 tracks :
   - name : Aphex Twin - Avril 14th
