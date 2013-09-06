@@ -72,10 +72,6 @@ prose:
           label: "Tags"
           value: ""
       - name: "category"
-#        field:
-#          element: "text"
-#          label: "Category"
-#          value: "DR3WH0"
         field:
           element: "select"
           label: "Category"
@@ -90,6 +86,10 @@ prose:
               value: "prose"
             - name: "Radio"
               value: "radio"
+
+lastfm:
+  username: DR3WH0
+  api: 838e67db61e754959ef27bd24aa5a1f8
 
 tracks :
   - name : Aphex Twin - Avril 14th
@@ -178,5 +178,9 @@ tracks :
     url : http://t.co/ksELzRWoul
   - name : Veell - Qlocker
     url : http://t.co/CHmhrFiYhB
-    
-    
+  - name : Proswell - Ahi
+    url : http://goo.gl/zRwIqG
+    date: 2013-09-06 Fri 04:49:55
+  - name : Monoceros - Life In a Fishbowl (Are They* Watching Us?)
+    url : http://goo.gl/9zdcRd
+    date: 2013-09-06 Fri 05:10:00
