@@ -27,13 +27,13 @@ Replace the playlist code in the default layout with the Liquid code below. If y
         <% unless forloop.last %>,<% endunless %>
       <% endfor %>]
 
-Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L94-96). Use the following template to manage your playlist:
+Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L94-96). Use the following template to manage your playlist, reformatting any of the data you saved from the widget setup:
 
     tracks :
       - name : track_name_here
         url : song_url_here
 
-Add new **name** and **url** lines for each track. Be sure to include the dash, as indicated above, before each name because Liquid uses that to identify each track in the `<% for track in site.tracks %>` loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
+Add new `name` and `url` lines for each track. Be sure to include the dash, as indicated above, before each `name` because Liquid uses that to identify each track in the `<% for track in site.tracks %>` loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
 
 **Further Reading**
 
