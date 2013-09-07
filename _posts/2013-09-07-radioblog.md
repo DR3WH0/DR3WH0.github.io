@@ -10,7 +10,7 @@ description: "Ruby script for loading the free Last.Fm web radio service from th
 **Features**
 
 * Load & auto-resume free [Last.Fm](http://last.fm) web radio from the command line
-* Tweet recent tracks to [Twitter](http://twitter.com) timeline
+* Tweet tracks and free MP3 downloads to [Twitter](http://twitter.com) timeline
 * Generate a [Markdown](http://daringfireball.net/projects/markdown/) formatted radio station blog post for [Jekyll](http://jekyllrb.com/)
 
 **Requirements**
