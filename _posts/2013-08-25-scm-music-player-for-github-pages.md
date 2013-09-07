@@ -33,7 +33,7 @@ Next you'll need to create your playlist with YAML tags in [\_config.yml](https:
       - name : track_name_here
         url : song_url_here
 
-Add new **name** and **url** lines for each track. Be sure to include the dash, as indicated above, before each name because Liquid uses that to identify each track in the \for loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
+Add new **name** and **url** lines for each track. Be sure to include the dash, as indicated above, before each name because Liquid uses that to identify each track in the `<% for track in site.tracks %>` loop. SCM Player supports URLs for MP3, SoundCloud, and YouTube.
 
 **Further Reading**
 
