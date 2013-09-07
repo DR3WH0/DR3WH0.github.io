@@ -172,8 +172,9 @@ tracks :
     url : http://t.co/PLe1VFiK7i
   - name : Monoceros - Pizzicato spoon
     url : http://t.co/8oIF88p9Ry
-  - name : Verbose - Personaradar
-    url : http://t.co/5EYuuMc4Mh
+# not working in SCM 2013-09-07
+#  - name : Verbose - Personaradar
+#    url : http://t.co/5EYuuMc4Mh
   - name : Recue - Orchard Rd.
     url : http://t.co/ksELzRWoul
   - name : Veell - Qlocker
