@@ -7,7 +7,7 @@ tags: music javascript liquid yaml github
 description: "Instructions for installing the SCM Music Player on GitHub Pages. Includes code for generating playlists with Liquid & YAML."
 ---
 
-Stumbled upon a cool gadget called the [SCM Music Player](http://scmplayer.net/) that I just added to the site. The default install is remotely hosted, but I chose to install locally on GitHub Pages to take advantage of Liquid & YAML for easy playlists.
+Stumbled upon a cool gadget called the [SCM Music Player](http://scmplayer.net/) that I just added to the site. The default install is remotely hosted, but I chose to install locally on GitHub Pages to take advantage of Liquid & YAML for easy playlist editing.
 
 **Local GitHub Pages Install**
 
@@ -19,7 +19,7 @@ In a web browser, navigate to the SCM Player's index.html page on your site (in 
 
 The Javascript for the playlists can get a bit unwieldy, and I don't want to walk through the SCM wizard to get new code every time I want change up the tracks. Liquid & YAML to the rescue!
 
-Replace the playlist code in the default layout with the Liquid code below. If you want to use the playlist you created with the SCM wizard, be sure to save that code somewhere. I've broken up the Liquid into logical chunks for readability, but you should put all of the code [on one line](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_includes/scm.html#L3) at the end of the data-config attribute.
+Replace the SCM wizard's playlist code with the Liquid code below. If you want to use the playlist generated with the SCM wizard, be sure to save that code somewhere. I've broken up the Liquid into logical chunks for readability, but you should put all of the code [on one line](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_includes/scm.html#L3) at the end of the `data-config` attribute.
 
     'playlist':[
       <% for track in site.tracks %>
@@ -27,7 +27,7 @@ Replace the playlist code in the default layout with the Liquid code below. If y
         <% unless forloop.last %>,<% endunless %>
       <% endfor %>]
 
-Next you'll need to create your playlist with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L94-96). Use the following template to manage your playlist, reformatting any of the data you saved from the widget setup:
+Next you'll need to create the track data with YAML tags in [\_config.yml](https://github.com/DR3WH0/DR3WH0.github.io/blob/master/_config.yml#L94-96). Use the following template to manage the playlist, reformatting any of the data you saved from the widget setup:
 
     tracks :
       - name : track_name_here
