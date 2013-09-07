@@ -31,9 +31,16 @@ description: "Ruby script for loading the free Last.Fm web radio service from th
 3. [Authenticate Twurl](http://rubydoc.info/gems/twurl/0.8.3/file/README) with a Twitter API Key. You will need to set up a [Twitter Dev Application](https://dev.twitter.com/) for your account and enable it to 'Read & Write.' [Stack Overflow](http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662) has a walk-through.
 4. Place [\_radioblog.rb](https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb) in the root directory of your Jekyll site.
 5. Run `ruby _radioblog.rb`.
+6. Push changes to your site with [git](http://dr3wh0.net/2013/08/25/git-reference) after the station has ended.
 
 **Possible Modifications**
 
 *This software is tailored for my personal use and may require modification beyond what is described here.*
 
-I've installed the [SCM Music Player](http://scmplayer.net) on <DR3WH0.NET>, and I added some code to write free download tracks to \_config.yml for [instant playlist updates](http://dr3wh0.net/2013/08/25/scm-music-player-for-github-pages).
+I've installed the [SCM Music Player](http://scmplayer.net) on [DR3WH0.NET](https://github.com/DR3WH0/DR3WH0.github.io/tree/master/musicplayer), and I added some code to write free download tracks to \_config.yml for instant playlist updates. You may want to [remove these lines](https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L145-160) in the free_download function if you have no use for that feature. If you have the SCM Music Player installed, and you want to automatically update your playlist, see [SCM Music Player for GitHub Pages](http://dr3wh0.net/2013/08/25/scm-music-player-for-github-pages) and add the following code to the end of your \_config.yml:
+
+    tracks :
+      - name : The Beatles - Here Comes The Sun
+        url : http://www.youtube.com/watch?v=n6j4TGqVl5g
+
+The twitter functionality is not integral to the software. You can safely remove the  following functions: [format_hash](https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L43-50) & [get_tags](https://github.com/DR3WH0/RadioBlog/blob/master/_radioblog.rb#L52-107). Also remove the code [here](), [here](), [here](), [here](), .
