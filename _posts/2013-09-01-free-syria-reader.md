@@ -18,3 +18,7 @@ Syria will not be freed by dropping bombs. The Syrian people have suffered long 
 - [Who Benefits From A War Between The United States And Syria?](http://www.infowars.com/who-benefits-from-a-war-between-the-united-states-and-syria/) by Michael Snyder
 
 Update 2013-09-06: [Ron Paul has a petition](ronpaulchannel.com/SOS) against another war to wreck another country.
+
+Update 2013-09-07:
+- [Syria: a vote of no-confidence in the President](http://jonrappoport.wordpress.com/2013/09/06/syria-a-vote-of-no-confidence-in-the-president/) by John Rappoport
+- [Syria Gambit: The Race to War - MP3 Audio (59:31)](https://dl.dropboxusercontent.com/u/8239797/4319-1-GRNH_episode_35_session_mixdown.mp3) from [Global Research News Hour Episode 35](http://www.globalresearch.ca/syria-gambit-the-race-to-war/5347338): Interviews with Michel Chossudovsky, Paul Craig Roberts, and Julie Lévesque
