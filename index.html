@@ -6,13 +6,14 @@ title: Home
 <h2>Recent Thoughts</h2>
 <hr/>
 
+{% assign counter = '.' %}
 {% for post in site.posts %}
   {% unless post.category == 'radio' %}
-    {% capture count %} {{ count | plus: 1 }} {% endcapture %}
-    {% unless count >= 8 %}
+    {% capture counter %} {{ counter | append:'.' }} {% endcapture %}
+    {% if counter.size < 9 %}
       <small>{{ post.date | date_to_string }}</small>
       <h2 class="recent"><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
-    {% endunless %}
+    {% endif %}
   {% endunless %}
 {% endfor %}
 
