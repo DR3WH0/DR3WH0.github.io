@@ -8,7 +8,7 @@ title: Home
 
 {% assign counter = '.' %}
 {% for post in site.posts %}
-  {% if post.category != 'radio' and counter.size <= 8 %}
+  {% if page.category != 'radio' and counter.size <= 8 %}
     {% capture counter %} {{ counter | append:'.' }} {% endcapture %}
     <small>{{ post.date | date_to_string }}</small>
     <h2 class="recent"><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
