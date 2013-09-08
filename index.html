@@ -9,7 +9,7 @@ title: Home
 {% for post in site.posts %}
   {% unless post.category == 'radio' %}
     {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
-    {% if post_count < 8 %}
+    {% if post_count < '8' %}
       <small>{{ post.date | date_to_string }}</small>
       <h2 class="recent"><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
     {% endif %}
