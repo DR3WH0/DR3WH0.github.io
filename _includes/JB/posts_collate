@@ -31,8 +31,12 @@ Usage:
       <h3>{{this_month}}</h3>
       <ul>
     {% endif %}
-  
-    <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
+
+    {% if source_page == 'archive' %}
+      {% unless post.category == 'radio' %}
+        <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
+      {% endunless %}
+    {% endif %}
   
     {% if forloop.last %}
       </ul>
