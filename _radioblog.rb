@@ -208,7 +208,7 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 
 	puts "Last.fm loaded >> AutoPlay ON"
 	puts "\nEnter \'quit\' at any time..."
-	radiobegin = %x[twurl -d "status=BEGIN #{station} radio #{infotags} #{blog}" "#{tweet}"]
+	radiobegin = %x[twurl -d "status=BEGIN #{station} radio #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
 
 	time = Time.new
 	t = time.strftime("%Y-%m-%d")
@@ -232,7 +232,7 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 			element = driver.find_element(:class, "dialogConfirm")
 			element.submit
 			puts "AUTOPLAY  #{station} radio"
-			radioresume = %x[twurl -d "status=AUTOPLAY #{station} radio #{infotags} #{blog}" "#{tweet}"]
+			radioresume = %x[twurl -d "status=AUTOPLAY #{station} radio #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
 		end
 		
 		begin # get most recent track
@@ -352,7 +352,7 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 	end
 
 	if num == 1 then t = "track" else t = "tracks" end	
-	radioend = %x[twurl -d "status=END #{station} radio (#{num} #{t}) #{infotags} #{blog}" "#{tweet}"]
+	radioend = %x[twurl -d "status=END #{station} radio (#{num} #{t}) #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
 	puts "Last.fm \'#{station}\' Radio (#{num} #{t}) >> Goodbye!"
 	driver.quit
 	exit
