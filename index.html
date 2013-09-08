@@ -8,13 +8,11 @@ title: Home
 
 {% assign counter = '.' %}
 {% for post in site.posts %}
-  {% unless post.category == 'radio' %}
+  {% if post.category != 'radio' && counter.size <= 8 %}
     {% capture counter %} {{ counter | append:'.' }} {% endcapture %}
-    {% if counter.size < 9 %}
-      <small>{{ post.date | date_to_string }}</small>
-      <h2 class="recent"><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
-    {% endif %}
-  {% endunless %}
+    <small>{{ post.date | date_to_string }}</small>
+    <h2 class="recent"><a href="{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></h2>
+  {% endif %}
 {% endfor %}
 
 <!--
