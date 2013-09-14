@@ -17,7 +17,7 @@ end
 def load_radio(station) # in Firefox 'lastfm' profile
 	begin
 		driver = Selenium::WebDriver.for :firefox, :profile => 'lastfm'
-		driver.manage.window.resize_to(580, 615)
+		driver.manage.window.resize_to(595, 615)
 		driver.navigate.to "http://last.fm/listen/"
 		element = driver.find_element(:name, "name")
 		element.send_keys "#{station}"
