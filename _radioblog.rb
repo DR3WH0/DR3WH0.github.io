@@ -23,8 +23,13 @@ def load_radio(station) # in Firefox 'lastfm' profile
 		element.send_keys "#{station}"
 		element.submit
 		driver
+
 	rescue Selenium::WebDriver::Error::NoSuchElementError
 		puts "ERROR >> load Last.fm >> Please try again."
+		exit
+	rescue Timeout::Error
+		puts "ERROR >> Last.fm timeout >> Please try again."
+		driver.quit
 		exit
 	end
 end
