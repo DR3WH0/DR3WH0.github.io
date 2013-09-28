@@ -241,7 +241,9 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 			end
 
 		rescue Selenium::WebDriver::Error::UnknownError # after Flash crash refresh
-			puts "ERROR >> unknown webdriver error"
+			puts "ERROR >> webdriver error >> restarting #{station} radio"
+			driver.quit
+			driver = load_radio(station)
 		end
 		
 		begin # get most recent track
