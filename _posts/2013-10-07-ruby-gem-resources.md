@@ -7,7 +7,7 @@ tags: ruby
 description: "Links to how-to resources for constructing Ruby Gems."
 ---
 
-- [RubyGems Guids: Make Your Own Gem](http://guides.rubygems.org/make-your-own-gem/)
+- [RubyGems Guides: Make Your Own Gem](http://guides.rubygems.org/make-your-own-gem/)
 
 - [The TimelessRepository: Making Ruby Gems](http://timelessrepo.com/making-ruby-gems)
 
