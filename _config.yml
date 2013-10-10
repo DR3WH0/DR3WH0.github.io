@@ -92,12 +92,12 @@ lastfm:
   api: 838e67db61e754959ef27bd24aa5a1f8
 
 tracks :
-  - name : Aphex Twin - Avril 14th
-    url : http://www.youtube.com/watch?v=MBFXJw7n-fU
-  - name : Low - Fearless (P.Floyd Cover)
-    url : http://www.youtube.com/watch?v=2LyEcWxI3UQ
-  - name : Stars Of The Lid - December Hunting
-    url : http://www.youtube.com/watch?v=u-MXZDkcPKM
+#  - name : Aphex Twin - Avril 14th
+#    url : http://www.youtube.com/watch?v=MBFXJw7n-fU
+#  - name : Low - Fearless (P.Floyd Cover)
+#    url : http://www.youtube.com/watch?v=2LyEcWxI3UQ
+#  - name : Stars Of The Lid - December Hunting
+#    url : http://www.youtube.com/watch?v=u-MXZDkcPKM
   - name : Abfarhrt Hinwil - Radiowellen
     url : http://t.co/JrzTapEmhw
   - name : Com Truise - Cyanide Sisters 
@@ -106,10 +106,10 @@ tracks :
     url : http://freedownloads.last.fm/download/209722767/One%2BMovie.mp3
   - name : Gimmik - Sister Moon
     url : http://goo.gl/MTuAeR
-  - name : zotalayer - ebb telemetry
-    url : http://t.co/aN2HsvUyAK
-#  - name : Gimmik - Ernie & Bert
-#    url : http://freedownloads.last.fm/download/798/Ernie%2B%2526%2BBert.mp3
+#  - name : zotalayer - ebb telemetry
+#    url : http://t.co/aN2HsvUyAK
+  - name : Gimmik - Ernie & Bert
+    url : http://freedownloads.last.fm/download/798/Ernie%2B%2526%2BBert.mp3
   - name : Abfarht Hinwil - Bumperstufe2
     url : http://t.co/7ZG79jKjQs
   - name : Point 7 - Ous
@@ -230,7 +230,7 @@ tracks :
   - name : Kettel - Not Gonna Get
     url : http://goo.gl/XjDkoi
     date: 2013-09-19 Thu 17:55:26
-# find out which character breaks the JS
+# find out which character breaks the JS (probably ? or !)
 #  - name : Gimmik - Qoui Donc M'importe, Godot?!
 #    url : http://goo.gl/kb9tJK
 #    date: 2013-09-23 Mon 03:38:24
