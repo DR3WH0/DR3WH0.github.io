@@ -231,9 +231,9 @@ tracks :
     url : http://goo.gl/XjDkoi
     date: 2013-09-19 Thu 17:55:26
 # find out which character breaks the JS (probably ? or !)
-#  - name : Gimmik - Qoui Donc M'importe, Godot?!
-#    url : http://goo.gl/kb9tJK
-#    date: 2013-09-23 Mon 03:38:24
+  - name : Gimmik - Qoui Donc M'importe, Godot!
+    url : http://goo.gl/kb9tJK
+    date: 2013-09-23 Mon 03:38:24
   - name : Lackluster - Starcell U.K.
     url : http://goo.gl/d4uaNn
     date: 2013-09-23 Mon 03:51:03
@@ -249,7 +249,7 @@ tracks :
   - name : Sinq - Acid Jazz
     url : http://goo.gl/8K9RVy
     date: 2013-09-24 Tue 04:25:25
-  - name : Robert Schumann - Impromptu #3 (Schumann)
+  - name : Robert Schumann - Impromptu No. 3
     url : http://goo.gl/dbOCRA
     date: 2013-09-27 Fri 17:18:41
   - name : Lithops - Attached
