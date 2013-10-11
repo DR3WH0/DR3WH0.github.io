@@ -1,4 +1,8 @@
-
+---
+layout: post
+published: true
+category: radio
+---
 
 **Thursday, October 10, 2013**
 
