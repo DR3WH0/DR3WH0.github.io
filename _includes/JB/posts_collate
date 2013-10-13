@@ -34,12 +34,20 @@ Usage:
 
     {% if source_page == 'archive' %}
       {% unless post.category == 'radio' %}
+        {% unless post.category == 'catalog' %}
         <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
+        {% endunless %}
       {% endunless %}
     {% endif %}
   
     {% if source_page == 'radio' %}
       {% if post.category == 'radio' %}
+        <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
+      {% endif %}
+    {% endif %}
+
+    {% if source_page == 'catalog' %}
+      {% if post.category == 'catalog' %}
         <li><span>{{ post.date | date: "%A, %B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}" {% if post.description %} title="{{ post.description }}" {% endif %}>{{ post.title }}</a></li>
       {% endif %}
     {% endif %}

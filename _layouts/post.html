@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article>
-  <h2>{{page.title}}</h2>
+  <h2>{{page.title}}{% if page.category == "radio" %}{% if page.catalog == "true" %}&nbsp;&nbsp;<a href="{{ page.url }}-catalog"><small>CATALOG</small>{% endif %}{% endif %}</h2>
   <hr/>
 
   {% if page.description %}
@@ -26,8 +26,4 @@ layout: default
 </ul>
 
 <p style="text-align:right"><span>{{ page.date | date: "%A, %B %e, %Y" }}</span>  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><small>This post is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</small></p>
-<!--
-<div id="disqus_thread"><p></p></div>
-<script src="/javascripts/disqus.js"></script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
--->
+

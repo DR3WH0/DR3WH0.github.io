@@ -2,6 +2,7 @@ require 'selenium-webdriver'
 require 'yaml'
 require 'open-uri'
 require 'xmlsimple'
+require 'nokogiri'
 require 'erb'
 require 'googl'
 
@@ -198,6 +199,27 @@ def get_album(info_url)
 	end
 end
 
+def get_tune(apiartist, apiname, blog)
+	begin
+		query = url_encode("#{apiartist} #{apiname}")
+		searchurl = "http://get-tune.net/?a=music&q=#{query}"
+		page = Nokogiri::HTML(open(searchurl))
+		downlink = page.css("a[class='playlist-btn-down no-ajaxy']")[0]['href']
+		shortdownlink = shorten(downlink, blog)
+
+		unless shortdownlink == blog
+			shortdownlink
+		else
+			nil
+		end
+
+	rescue OpenURI::HTTPError # 400 Bad Request
+		puts "ERROR >> get tune (400)"
+	rescue Timeout::Error # connection timed out
+		puts "ERROR >> get tune (timeout)"
+	end
+end
+
 def manage_radio(driver, station, q) # resume radio & tweet tracks
 	blog = "http://goo.gl/tQtGNR"
 	infotags = "#lastfm #ruby #webdriver #twurl"
@@ -219,12 +241,20 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 	t = time.strftime("%Y-%m-%d")
 	dt = time.strftime("%A, %B %e, %Y")
 	filestation = station.gsub(' ', '-')
+
 	unless File.file?("./_posts/#{t}-#{filestation}-radio.md")
-		post = "---\nlayout: post\npublished: true\ncategory: radio\n---\n\n**#{dt}**\n\n"
+		post = "---\nlayout: post\npublished: true\ncategory: radio\ncatalog: true\n---\n\n**#{dt}**\n\n"
 	else
 		post = "\n\n**#{dt}**\n\n"
 	end
 	File.open("./_posts/#{t}-#{filestation}-radio.md", 'a') { |file| file.write(post) }
+
+	unless File.file?("./_posts/#{t}-#{filestation}-radio-catalog.md")
+		post = "---\nlayout: post\npublished: true\ncategory: catalog\n---\n\n**#{dt}**\n\n"
+	else
+		post = "\n\n**#{dt}**\n\n"
+	end
+	File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
 
 	loop do
 		sleep(60) # poll lfm api every 60 seconds
@@ -353,11 +383,36 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 				album = get_album(info_url)
 
 				if shortdlurl
-					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) [FREE MP3](#{shortdlurl})\n\n    #{album}\n\n"
+					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) - [FREE MP3](#{shortdlurl})\n\n    #{album}\n\n"
 				else
 					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl})\n\n    #{album}\n\n"
 				end
 				File.open("./_posts/#{t}-#{filestation}-radio.md", 'a') { |file| file.write(post) }
+
+				catalogurl = get_tune(@apiartist, @apiname, blog)
+				if catalogurl
+					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) - [Download Link](#{catalogurl})\n\n"
+					File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
+
+					unless shortdlurl
+						yamlname = "#{@artist} - #{@name}"
+						config = YAML::load(File.open('_config.yml'))
+						tracks = config['tracks']
+						names = Array.new
+
+						tracks.each do |track|
+							names.push(track['name'])
+						end
+
+						unless names.include? yamlname
+							# add track to YAML formatted log file
+							time = Time.new
+							t = time.strftime("%Y-%m-%d %a %H:%M:%S")
+							log = "  - name : #{@artist} - #{@name}\n    url : #{catalogurl}\n    date: #{t}\n"
+							File.open('_config.yml', 'a') { |file| file.write(log) }
+						end
+					end
+				end
 			end
 		end
 	end

@@ -1,0 +1,13 @@
+---
+layout: default
+title : Catalog
+---
+
+<h2>Catalog</h2>
+<hr/>
+
+{% include JB/setup %}
+
+{% assign posts_collate = site.posts %}
+{% assign source_page = 'catalog' %}
+{% include JB/posts_collate %}
