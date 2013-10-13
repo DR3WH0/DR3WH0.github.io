@@ -4,7 +4,7 @@ published: true
 category: radio
 ---
 
-**Saturday, October 12, 2013** - [CATALOG](/2013/10/12/downtempo-radio-catalog)
+**Saturday, October 12, 2013**
 
 *   16:16:36  [Make It Good](http://goo.gl/31hgB9) by [Fink](http://www.last.fm/music/Fink)
 
@@ -12,7 +12,7 @@ category: radio
 
 
 
-**Saturday, October 12, 2013** - [CATALOG](/2013/10/12/downtempo-radio-catalog)
+**Saturday, October 12, 2013**
 
 *   16:24:57  [Verse](http://goo.gl/XW7pWO) by [Rhye](http://www.last.fm/music/Rhye)
 
