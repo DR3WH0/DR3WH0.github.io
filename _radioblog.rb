@@ -406,9 +406,8 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 
 						unless names.include? yamlname
 							# add track to YAML formatted log file
-							time = Time.new
-							t = time.strftime("%Y-%m-%d %a %H:%M:%S")
-							log = "  - name : #{@artist} - #{@name}\n    url : #{catalogurl}\n    date: #{t}\n"
+							tstring = time.strftime("%Y-%m-%d %a %H:%M:%S")
+							log = "  - name : #{@artist} - #{@name}\n    url : #{catalogurl}\n    date: #{tstring}\n"
 							File.open('_config.yml', 'a') { |file| file.write(log) }
 						end
 					end
