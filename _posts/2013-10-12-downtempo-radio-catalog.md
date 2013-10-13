@@ -58,7 +58,7 @@ category: catalog
 
 *   18:12:50  [Lonely Soul](http://goo.gl/nXf0t) by [UNKLE](http://www.last.fm/music/UNKLE) - [Download Link](http://goo.gl/9AogwT)
 
-*   18:15:03  [Camel](http://goo.gl/F5eMgn) by [Flying Lotus](http://www.last.fm/music/Flying+Lotus) - [Download Link](http://goo.gl/M06HPs)
+*   18:15:03  [Camel](http://goo.gl/F5eMgn) by [Flying Lotus](http://www.last.fm/music/Flying+Lotus) - [Download Link](http://stream.get-tune.net/listen/69922153/22069190/1633601200/44c4f1586cde6f76/Flying_Lotus_-_Camel_Nosaj_Thing_Remix_(get-tune.net).mp3)
 
 *   18:19:19  [World Looking In](http://goo.gl/2nX06) by [Morcheeba](http://www.last.fm/music/Morcheeba) - [Download Link](http://goo.gl/WJaqIQ)
 
