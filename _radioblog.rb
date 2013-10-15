@@ -246,14 +246,14 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 	unless File.file?("./_posts/#{t}-#{filestation}-radio.md")
 		post = "---\nlayout: post\npublished: true\ncategory: radio\n---\n\n**#{dt}** - [CATALOG](#{mdt}#{filestation}-radio-catalog)\n\n"
 	else
-		post = "\n\n**#{dt}**\n\n"
+		post = "\n\n**#{dt}** - [CATALOG](#{mdt}#{filestation}-radio-catalog)\n\n"
 	end
 	File.open("./_posts/#{t}-#{filestation}-radio.md", 'a') { |file| file.write(post) }
 
 	unless File.file?("./_posts/#{t}-#{filestation}-radio-catalog.md")
-		post = "---\nlayout: post\npublished: true\ncategory: catalog\n---\n\n**#{dt}** - [POST](#{mdt}#{filestation}-radio)\n\n"
+		post = "---\nlayout: post\npublished: true\ncategory: catalog\n---\n\n**#{dt}** - [RADIO](#{mdt}#{filestation}-radio)\n\n"
 	else
-		post = "\n\n**#{dt}**\n\n"
+		post = "\n\n**#{dt}** - [RADIO](#{mdt}#{filestation}-radio)\n\n"
 	end
 	File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
 
