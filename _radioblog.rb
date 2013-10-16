@@ -281,25 +281,27 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 			open(recent_url, :read_timeout=>5) do |body|
 			data = XmlSimple.xml_in body.read
 
-				recenttracks = data['recenttracks'][0]
-				if recenttracks['track'][1] == nil
-					track = recenttracks['track'][0]
-				else  # ignore 'listening now' tracks
-					track = recenttracks['track'][1]
+				unless data == nil
+					recenttracks = data['recenttracks'][0]
+					if recenttracks['track'][1] == nil
+						track = recenttracks['track'][0]
+					else  # ignore 'listening now' tracks
+						track = recenttracks['track'][1]
+					end
+
+					@artist = track['artist'][0]['content']
+					@apiartist = @artist.dup
+					@artist.gsub!("&", "a.")
+					@artist.gsub!("\"", "\'")
+
+					@name = track['name'][0]
+					@apiname = @name.dup
+					@name.gsub!("&", "a.")
+					@name.gsub!("\"", "\'")
+
+					url = track['url'][0]
+					@shorturl = shorten(url, blog)
 				end
-
-				@artist = track['artist'][0]['content']
-				@apiartist = @artist.dup
-				@artist.gsub!("&", "a.")
-				@artist.gsub!("\"", "\'")
-
-				@name = track['name'][0]
-				@apiname = @name.dup
-				@name.gsub!("&", "a.")
-				@name.gsub!("\"", "\'")
-
-				url = track['url'][0]
-				@shorturl = shorten(url, blog)
 			end
 
 		rescue OpenURI::HTTPError # 400 Bad Request
