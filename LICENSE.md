@@ -1,7 +1,7 @@
 DR3WH0.github.io
 ================
 
-Unless [otherwise noted](http://dr3wh0.net/about.html), all content in DR3WH0.github.io is:
+Unless [otherwise noted](http://dr3wh0.net/about.html), all content is:
 
 [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/deed.en_US) ![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png)
 
