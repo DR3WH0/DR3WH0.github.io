@@ -121,7 +121,6 @@ def free_download(info_url, artist, name, hashtags, tweet, tcolen, blog)
 			unless track['freedownload'] == nil
 				puts "FREE MP3  \'#{artist} - #{name}.mp3\'"
 				yamlname = "#{artist} - #{name}"
-				yamlname.gsub!("\'", " ")
 				filename = "\'#{artist} - #{name}.mp3\'"
 				dl_url = track['freedownload'][0]
 				shortdlurl = shorten(dl_url, blog)
@@ -397,14 +396,31 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 				if catalogurl
 					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) - #{catalogurl}\n\n"
 					File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
+
+#					unless shortdlurl
+#						yamlname = "#{@artist} - #{@name}"
+#						config = YAML::load(File.open('_config.yml'))
+#						tracks = config['tracks']
+#						names = Array.new
+#
+#						tracks.each do |track|
+#							names.push(track['name'])
+#						end
+#
+#						unless names.include? yamlname
+#							# add track to YAML formatted log file
+#							tstring = time.strftime("%Y-%m-%d %a %H:%M:%S")
+#							log = "  - name : #{@artist} - #{@name}\n    url : #{catalogurl}\n    date: #{tstring}\n"
+#							File.open('_config.yml', 'a') { |file| file.write(log) }
+#						end
+#					end
 				end
 			end
 		end
 	end
 
-	if num == 1 then t = "track" else t = "tracks" end
-	radiodate = time.strftime("%Y/%m/%d")
-	radioend = %x[twurl -d "status=END #{station} radio (#{num} #{t}) #{infotags} DR3WH0.NET/#{radiodate}/#{filestation}-radio" "#{tweet}"]
+	if num == 1 then t = "track" else t = "tracks" end	
+	radioend = %x[twurl -d "status=END #{station} radio (#{num} #{t}) #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
 	puts "Last.fm \'#{station}\' Radio (#{num} #{t}) >> Goodbye!"
 	driver.quit
 	exit
