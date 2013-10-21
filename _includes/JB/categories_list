@@ -23,17 +23,21 @@ Usage:
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %} 
       {% unless category == 'catalog' %}
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
-    		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
-    	</a></li>
+      {% unless category == 'radio' %}
+      	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+      		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+      	</a></li>
+      {% endunless %}
       {% endunless %}
     {% endfor %}
   {% else %}
     {% for category in categories_list %} 
       {% unless category[0] == 'catalog' %}
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
-    		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
-    	</a></li>
+      {% unless category[0] == 'radio' %}
+      	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
+      		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+      	</a></li>
+      {% endunless %}
       {% endunless %}
     {% endfor %}
   {% endif %}
