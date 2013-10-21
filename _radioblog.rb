@@ -161,7 +161,7 @@ def free_download(info_url, artist, name, hashtags, tweet, tcolen, blog)
 					# add track to YAML formatted log file
 					time = Time.new
 					t = time.strftime("%Y-%m-%d %a %H:%M:%S")
-					log = "  - name : #{artist} - #{name}\n    url : #{shortdlurl}\n    date: #{t}\n"
+					log = "  - name : #{yamlname}\n    url : #{shortdlurl}\n    date: #{t}\n"
 					File.open('_config.yml', 'a') { |file| file.write(log) }
 					shortdlurl
 				end
