@@ -84,6 +84,8 @@ prose:
               value: "programming"
             - name: "Prose"
               value: "prose"
+            - name: "Photo"
+              value: "photo"
             - name: "Radio"
               value: "radio"
 
