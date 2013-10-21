@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Washington DC
 category: poetry
-tags: haiku politics photos
+tags: haiku politics
 ---
 
 ![Washington Monument Through The Trees](http://31.media.tumblr.com/a7544280cf6518356c1abbd1db808fbf/tumblr_mt2fv6w4JR1rive1ro1_500.jpg "Washington Monument")
