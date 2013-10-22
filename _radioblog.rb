@@ -121,7 +121,8 @@ def free_download(info_url, artist, name, hashtags, tweet, tcolen, blog)
 			unless track['freedownload'] == nil
 				puts "FREE MP3  \'#{artist} - #{name}.mp3\'"
 				yamlname = "#{artist} - #{name}"
-				yamlname.gsub!("\'", " ")
+				yamlname.gsub!("\'", "\\\'")
+				yamlname.gsub!("\"", "\\\'")
 				filename = "\'#{artist} - #{name}.mp3\'"
 				dl_url = track['freedownload'][0]
 				shortdlurl = shorten(dl_url, blog)
