@@ -233,7 +233,7 @@ tracks :
     url : http://goo.gl/XjDkoi
     date: 2013-09-19 Thu 17:55:26
 # Gimmik - Qoui Donc M'importe, Godot? single ' character breaks the JS
-  - name : Gimmik - Qoui Donc M importe, Godot?!
+  - name : Gimmik - Qoui Donc M\'importe, Godot?!
     url : http://goo.gl/kb9tJK
     date: 2013-09-23 Mon 03:38:24
   - name : Lackluster - Starcell U.K.
@@ -383,7 +383,7 @@ tracks :
   - name : Nils Frahm - Mi
     url : http://goo.gl/bMPuyN
     date: 2013-10-20 Sun 10:34:12
-  - name : Labores Somnium - Where d You Go
+  - name : Labores Somnium - Where\'d You Go
     url : http://goo.gl/YMLajp
     date: 2013-10-20 Sun 11:33:29
   - name : Nils Frahm - Me
@@ -419,7 +419,7 @@ tracks :
   - name : Gimmik - 1 Min. Journey
     url : http://goo.gl/cenuA6
     date: 2013-10-21 Mon 05:24:07
-  - name : Sleepy Town Manufacture - Don t You Miss Me?
+  - name : Sleepy Town Manufacture - Don\'t You Miss Me?
     url : http://goo.gl/uYE4TE
     date: 2013-10-21 Mon 06:38:28
   - name : Sense - Korma
