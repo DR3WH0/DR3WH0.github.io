@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Free Syria Reader
 category: prose
-tags: syria politics war
+tags: politics war
 description: The Syrian people will not be freed by dropping bombs. Please take the time to learn about what is really going on.
 ---
 
