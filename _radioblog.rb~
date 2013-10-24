@@ -312,9 +312,6 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 		rescue Timeout::Error # connection timed out
 			puts "ERROR >> recent tracks (timeout)"
 			next
-		rescue
-			puts "ERROR >> recent tracks (unknown)"
-			next
 		end
 
 		unless @names.include? @name # tweet new track
