@@ -8,6 +8,7 @@ description: Frequently Used Git Commands
 ---
 
 **[Git Reference](http://gitref.org/index.html)** - Documentation by the GitHub crew.
+**[Git/Gihub Resources](http://bradfrostweb.com/blog/post/gitgithub-resources/)** - Roundup of tutorials and walkthroughs.
 
 **Update Cloned Repo**
 
