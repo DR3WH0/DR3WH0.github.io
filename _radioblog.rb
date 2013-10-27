@@ -40,7 +40,7 @@ def shorten(url, blog) # create short urls with goo.gl
 		urlshortener = Googl.shorten(url)
 		shorturl = urlshortener.short_url
 		shorturl
-	rescue
+	rescue Exception
 		puts "ERROR >> create goo.gl URL"
 		"#{blog}"
 	end
@@ -237,7 +237,7 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 
 	puts "Last.fm loaded >> AutoPlay ON"
 	puts "\nEnter \'quit\' at any time..."
-	radiobegin = %x[twurl -d "status=BEGIN #{station} radio #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
+	radiobegin = %x[twurl -d "status=BEGIN #{station} RadioBlog #{blog} on DR3WH0.NET #{infotags}" "#{tweet}"]
 
 	time = Time.new
 	t = time.strftime("%Y-%m-%d")
@@ -270,7 +270,7 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 				element = driver.find_element(:class, "dialogConfirm")
 				element.submit
 				puts "AUTOPLAY  #{station} radio"
-				radioresume = %x[twurl -d "status=AUTOPLAY #{station} radio #{infotags} RadioBlog #{blog} on DR3WH0.NET" "#{tweet}"]
+				radioresume = %x[twurl -d "status=AUTOPLAY #{station} RadioBlog #{blog} on DR3WH0.NET #{infotags}" "#{tweet}"]
 			end
 
 		rescue Selenium::WebDriver::Error::UnknownError # after Flash crash refresh
