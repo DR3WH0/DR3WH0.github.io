@@ -521,9 +521,10 @@ tracks :
   - name : Orchestra de Blonde - One Yaer Sax Power Symphony (Live)
     url : http://goo.gl/ofGJYa
     date: 2013-11-05 Tue 05:03:02
-  - name : G.M.Orchestra - We Are Free (Live)
-    url : http://goo.gl/kQbK9p
-    date: 2013-11-05 Tue 05:22:58
+# TODO: implement ban list
+#  - name : G.M.Orchestra - We Are Free (Live)
+#    url : http://goo.gl/kQbK9p
+#    date: 2013-11-05 Tue 05:22:58
   - name : ifVersionLinger - La Prisa Educable - open version [mPauly]
     url : http://goo.gl/hxKoiV
     date: 2013-11-05 Tue 05:28:16
@@ -539,18 +540,18 @@ tracks :
   - name : pumpkin jacket - Rainbow
     url : http://goo.gl/6GUE90
     date: 2013-11-05 Tue 07:58:58
-  - name : Sax a. Moryson - Rhythm Of My Hearts (Live)
-    url : http://goo.gl/JiwPtL
-    date: 2013-11-05 Tue 08:26:52
+#  - name : Sax a. Moryson - Rhythm Of My Hearts (Live)
+#    url : http://goo.gl/JiwPtL
+#    date: 2013-11-05 Tue 08:26:52
   - name : pumpkin jacket - Giant Steps
     url : http://goo.gl/9jGOkm
     date: 2013-11-05 Tue 09:08:30
-  - name : Sax a. Moryson - Anno 1926
-    url : http://goo.gl/FWKZTe
-    date: 2013-11-05 Tue 10:19:10
-  - name : G.M.Orchestra - Second Floor (Live)
-    url : http://goo.gl/1jCDnY
-    date: 2013-11-05 Tue 10:24:28
+#  - name : Sax a. Moryson - Anno 1926
+#    url : http://goo.gl/FWKZTe
+#    date: 2013-11-05 Tue 10:19:10
+#  - name : G.M.Orchestra - Second Floor (Live)
+#    url : http://goo.gl/1jCDnY
+#    date: 2013-11-05 Tue 10:24:28
   - name : Sinq - Whos Afraid of Noises?s Afraid of Noises?
     url : http://goo.gl/XvgnAd
     date: 2013-11-06 Wed 04:09:44
