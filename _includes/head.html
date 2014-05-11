@@ -2,7 +2,7 @@
   <meta http-equiv="Content-Type" content="Type=text/html; charset=utf-8" />
   <meta name="author" content="DR3WH0">
   <meta name="keywords" content="Prose, Poetry, Photography, Music" />
-  <title>DR3WH0{% if page.title %} | {{ page.title }} {% endif %}</title>
+  <title>DR3WH0{% if page.title %} | {{ page.title }}{% endif %}</title>
   <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" media="screen" charset="utf-8"/>
   <link rel="icon" type="image/png" href="https://dl.dropboxusercontent.com/u/8239797/DR3WH0_favicon.png"/>
   <script src="/javascripts/scale.fix.js"></script>
@@ -13,4 +13,7 @@
   <meta property="dc:type" content="Blog" />
   <meta property="dc:format" content="text/html" />
   <meta property="dc:language" content="en" />
+  {% if page.tags %}
+    {% for tag in page.tags %}<meta property="dc:subject" content="{{ tag }}">{% endfor %}
+  {% endif %}
 </head>
