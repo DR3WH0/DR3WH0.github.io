@@ -277,6 +277,9 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 			puts "ERROR >> webdriver error >> restarting #{station} radio"
 			driver.quit
 			driver = load_radio(station)
+		rescue Timeout::Error # connection timed out
+			puts "ERROR >> are you listening dialog (timeout)"
+			next
 		end
 		
 		begin # get most recent track
