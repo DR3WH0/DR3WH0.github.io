@@ -17,4 +17,7 @@
   {% if page.tags %}
     {% for tag in page.tags %}<meta property="dc:subject" content="{{ tag }}" />{% endfor %}
   {% endif %}
+  {% if page.category == 'radio' %}
+    <meta property="dc:subject" content="music" />
+  {% endif %}
 </head>
