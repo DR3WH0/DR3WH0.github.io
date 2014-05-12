@@ -11,7 +11,7 @@
 
   <!-- RDFa Dublin Core Metadata -->
   <meta property="dc:creator" content="DR3WH0" />
-  <meta property="dc:type" content="Blog" />
+  <meta property="dc:type" content="Text" />
   <meta property="dc:format" content="text/html" />
   <meta property="dc:language" content="en" />
   {% if page.title %}<meta property="dc:title" content="{{ page.title }}" />{% endif %}
@@ -20,9 +20,16 @@
     {% for tag in page.tags %}<meta property="dc:subject" content="{{ tag }}" />{% endfor %}
   {% endif %}
   {% if page.category == 'radio' %}
+    <meta property="dc:description" content="Track list with albumm covers for a last.fm station played by DR3WH0.">
+    <meta property="dc:type" content="Image" />
+    <meta property="dc:format" content="image/jpeg" />
+    <meta property="dc:format" content="image/png" />
     <meta property="dc:subject" content="music" />
   {% endif %}
   {% if page.category == 'photo' %}
+    <meta property="dc:description" content="A photograph by DR3WH0." />
+    <meta property="dc:type" content="Image" />
+    <meta property="dc:format" content="image/jpeg" />
     <meta property="dc:subject" content="photography" />
   {% endif %}
 
@@ -31,7 +38,7 @@
   {% if page.title %}<meta property="og:title" content="{{ page.title }}">{% endif %}
   {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
   {% if page.category == 'radio' %}
-    <meta property="og:description" content="A last.fm station played by DR3WH0." />
+    <meta property="og:description" content="Track list with albumm covers for a last.fm station played by DR3WH0." />
   {% endif %}
   {% if page.category == 'photo' %}
     <meta property="og:description" content="A photograph by DR3WH0." />
