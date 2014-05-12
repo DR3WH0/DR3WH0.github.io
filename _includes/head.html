@@ -20,7 +20,7 @@
     {% for tag in page.tags %}<meta property="dc:subject" content="{{ tag }}" />{% endfor %}
   {% endif %}
   {% if page.category == 'radio' %}
-    <meta property="dc:description" content="Track list with albumm covers for a last.fm station played by DR3WH0.">
+    <meta property="dc:description" content="Track list with album covers for a last.fm station played by DR3WH0.">
     <meta property="dc:type" content="Image" />
     <meta property="dc:format" content="image/jpeg" />
     <meta property="dc:format" content="image/png" />
@@ -38,7 +38,7 @@
   {% if page.title %}<meta property="og:title" content="{{ page.title }}">{% endif %}
   {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
   {% if page.category == 'radio' %}
-    <meta property="og:description" content="Track list with albumm covers for a last.fm station played by DR3WH0." />
+    <meta property="og:description" content="Track list with album covers for a last.fm station played by DR3WH0." />
   {% endif %}
   {% if page.category == 'photo' %}
     <meta property="og:description" content="A photograph by DR3WH0." />
