@@ -8,6 +8,12 @@
   <script src="/javascripts/scale.fix.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+  {% if page.category == 'radio' %}
+    <meta name="description" content="Track list with album covers for a last.fm station played by DR3WH0." />
+  {% endif %}
+  {% if page.category == 'photo' %}
+    <meta name="description" content="A photograph by DR3WH0." />
+  {% endif %}
 
   <!-- RDFa Dublin Core Metadata -->
   <meta property="dc:creator" content="DR3WH0" />
@@ -20,11 +26,12 @@
     {% for tag in page.tags %}<meta property="dc:subject" content="{{ tag }}" />{% endfor %}
   {% endif %}
   {% if page.category == 'radio' %}
-    <meta property="dc:description" content="Track list with album covers for a last.fm station played by DR3WH0.">
+    <meta property="dc:description" content="Track list with album covers for a last.fm station played by DR3WH0." />
     <meta property="dc:type" content="Image" />
     <meta property="dc:format" content="image/jpeg" />
     <meta property="dc:format" content="image/png" />
     <meta property="dc:subject" content="music" />
+    <meta property="dc:subject" content="album artwork" />
   {% endif %}
   {% if page.category == 'photo' %}
     <meta property="dc:description" content="A photograph by DR3WH0." />
@@ -34,8 +41,8 @@
   {% endif %}
 
   <!-- Open Graph Metadata -->
-  <meta property="og:site_name" content="DR3WH0: Time Travel & Other Anomalies">
-  {% if page.title %}<meta property="og:title" content="{{ page.title }}">{% endif %}
+  <meta property="og:site_name" content="DR3WH0: Time Travel & Other Anomalies" />
+  {% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
   {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
   {% if page.category == 'radio' %}
     <meta property="og:description" content="Track list with album covers for a last.fm station played by DR3WH0." />
