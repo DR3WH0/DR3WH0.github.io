@@ -14,7 +14,7 @@ layout: default
   {% endif %}
 
   <span property="articleBody">
-    {% if page.category == 'photo' %}<span typeof="Photograph">{{content}}</span>
+    {% if page.category == 'photo' %}<span typeof="Photograph"><span property="genre" content="black-and-white photographs">{{content}}</span></span>
     {% else %}{{content}}{% endif %}
   </span>
 </article>
