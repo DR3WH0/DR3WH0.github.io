@@ -11,7 +11,7 @@ layout: none
 		{% for post in site.posts limit:10 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				<description>{% if post.description != null %}{{ post.description | xml_escape }}{% elsif post.category == photo %}Photograph by DR3WH0{% elsif post.category == radio %}Track List for a Last.fm radio station played by DR3WH0{% else %}Blog Post by DR3WH0{% endif %}</description>
+				<description>{% if post.description != null %}{{ post.description | xml_escape }}{% elsif post.category == 'photo' %}Photograph by DR3WH0{% elsif post.category == 'radio' %}Track List for a Last.fm radio station played by DR3WH0{% else %}Blog Post by DR3WH0{% endif %}</description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y" }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
