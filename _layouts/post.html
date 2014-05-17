@@ -13,7 +13,10 @@ layout: default
     {% endunless %}
   {% endif %}
 
-  <span property="articleBody">{{content}}</span>
+  <span property="articleBody">
+    {% if page.category == 'photo' %}<span typeof="Photograph">{{content}}</span>
+    {% else %}{{content}}{% endif %}
+  </span>
 </article>
 
 <p style="text-align:right"><small><a href="/guestbook.html"><b>COMMENTS >>></b></a></small></p>
