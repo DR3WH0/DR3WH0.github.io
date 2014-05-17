@@ -1,4 +1,4 @@
-<head resource="{{ site.url }}{{ page.url }}">
+<head>
   <meta http-equiv="Content-Type" content="Type=text/html; charset=utf-8" />
   <meta name="author" content="DR3WH0">
   <meta name="keywords" content="Prose, Poetry, Photography, Music" />
@@ -18,7 +18,7 @@
   {% endif %}
 
   <!-- RDFa Dublin Core Metadata -->
-  <span vocab="http://purl.org/dc/terms/">
+  <span vocab="http://purl.org/dc/terms/" resource="{{ site.url }}{{ page.url }}">
   <meta property="creator" content="DR3WH0" />
   <meta property="language" content="en" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
@@ -47,7 +47,7 @@
   </span>
 
   <!-- Open Graph Metadata -->
-  <span vocab="http://ogp.me/ns#">
+  <span vocab="http://ogp.me/ns#" resource="{{ site.url }}{{ page.url }}">
   <meta property="site_name" content="DR3WH0: Time Travel & Other Anomalies" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
   {% if page.description %}<meta property="description" content="{{ page.description }}" />
