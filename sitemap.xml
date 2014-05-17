@@ -16,11 +16,13 @@ layout: nil
   </url>
   {% endfor %}
   {% for page in site.pages %}
+  {% if page.sitemap != null and page.sitemap != empty %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    <priority>{{ page.sitemap.priority }}</priority>
   </url>
+  {% endif %}
   {% endfor %}
 </urlset>
