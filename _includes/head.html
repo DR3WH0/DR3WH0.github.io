@@ -18,8 +18,8 @@
   {% endif %}
 
   <!-- RDFa Dublin Core Metadata -->
-  <span vocab="http://purl.org/dc/terms/" resource="{{ site.url }}{{ page.url }}">
-  <meta property="creator rightsHolder" typeof="Agent" content="DR3WH0" resource="{{ site.url }}{{ page.url }}#author" />
+  <span vocab="http://purl.org/dc/terms/" resource="{{ site.url }}{{ page.url }}#dc">
+  <meta property="creator rightsHolder" content="DR3WH0" resource="{{ site.url }}{{ page.url }}#author" />
   <meta property="language" content="en" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
   {% if page.category == 'radio' %}
@@ -47,7 +47,7 @@
   </span>
 
   <!-- Open Graph Metadata -->
-  <span vocab="http://ogp.me/ns#" resource="{{ site.url }}{{ page.url }}">
+  <span vocab="http://ogp.me/ns#" resource="{{ site.url }}{{ page.url }}#ogp">
   <meta property="site_name" content="DR3WH0: Time Travel & Other Anomalies" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
   {% if page.description %}<meta property="description" content="{{ page.description }}" />
