@@ -37,7 +37,11 @@
     <meta property="format" content="image/jpeg" />
     <meta property="subject" content="photography" />
   {% else %}
-    {% if page.description %}<meta property="description" content="{{ page.description }}" />{% endif %}
+    {% if page.description %}
+      <meta property="description" content="{{ page.description }}" />
+    {% else %}
+      <meta property="description" content="A photo/poetry/music blog by DR3WH0." />
+    {% endif %}
     <meta property="type" content="Text" />
     <meta property="format" content="text/html" />
   {% endif %}
