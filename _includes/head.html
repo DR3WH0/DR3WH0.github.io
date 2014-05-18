@@ -19,7 +19,7 @@
 
   <!-- RDFa Dublin Core Metadata -->
   <span vocab="http://purl.org/dc/terms/" resource="{{ site.url }}{{ page.url }}">
-  <meta property="creator" content="DR3WH0" />
+  <meta property="creator" typeof="Agent" content="DR3WH0" resource="authorName" />
   <meta property="language" content="en" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
   {% if page.category == 'radio' %}
