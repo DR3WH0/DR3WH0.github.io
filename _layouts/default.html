@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body vocab="http://schema.org/" typeof="CreativeWork">
+  <body vocab="http://schema.org/">
     {% include scm.html %}
     <div class="wrapper">
       {% include header.html %}
-      <section id="main">
+      <section id="main" typeof="CreativeWork">
         {{ content }}
       </section>
       {% include footer.html %}
