@@ -7,7 +7,7 @@
     {% include scm.html %}
     <div class="wrapper">
       {% include header.html %}
-      <section id="main" typeof="CreativeWork">
+      <section id="main" typeof="CreativeWork" resource="{{ site.url }}{{ page.url }}#schema">
         {{ content }}
       </section>
       {% include footer.html %}
