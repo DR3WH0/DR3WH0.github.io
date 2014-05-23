@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article vocab="http://schema.org/" typeof="BlogPosting" resource="{{ site.url }}{{ page.url }}#schema">
+<article typeof="BlogPosting" resource="{{ site.url }}{{ page.url }}#schema">
   <h2 property="name">{{page.title}}</h2>
   <hr/>
 
@@ -28,5 +28,5 @@ layout: default
   {% include JB/tags_list %}
 </ul>
 
-<p style="text-align:right" resource="{{ site.url }}{{ page.url }}#author"><span property="http://purl.org/dc/terms/created" content="{{ page.date | date: "%Y-%m-%d" }}" resource="{{ site.url }}{{ page.url }}#dc">{{ page.date | date: "%A, %B %e, %Y" }}</span>  <a property="http://creativecommons.org/ns#license" rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="tab"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><small>This post is licensed under a <a property="http://creativecommons.org/ns#license" rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="tab">Creative Commons Attribution 3.0 Unported License</a>.</small></p>
+<p style="text-align:right" resource="{{ site.url }}{{ page.url }}#author"><span property="http://purl.org/dc/terms/created" content="{{ page.date | date: "%Y-%m-%d" }}" resource="{{ site.url }}{{ page.url }}#dc">{{ page.date | date: "%A, %B %e, %Y" }}</span>  <a property="http://creativecommons.org/ns#license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="tab"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><small>This post is licensed under a <a property="http://creativecommons.org/ns#license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="tab">Creative Commons Attribution 3.0 Unported License</a>.</small></p>
 
