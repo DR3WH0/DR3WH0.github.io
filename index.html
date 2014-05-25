@@ -9,7 +9,7 @@ title: Home
 {% for post in site.posts limit:11 %}
   {% unless post.category == 'catalog' %}
     <small>{{ post.date | date_to_string }}</small>
-    <h2 class="recent"><a href="{{ post.url }}" {% if post.description %}title="{{ post.description }}"{% elsif post.category == 'radio' %}title="Track list with album covers for a last.fm station played by DR3WH0."{% elsif post.category == 'photo' %}title="A photograph by DR3WH0."{% else %}title="A blog post by DR3WH0."{% endif %}>{{ post.title }}</a></h2>
+    <h3 class="recent"><a href="{{ post.url }}" {% if post.description %}title="{{ post.description }}"{% elsif post.category == 'radio' %}title="Track list with album covers for a last.fm station played by DR3WH0."{% elsif post.category == 'photo' %}title="A photograph by DR3WH0."{% else %}title="A blog post by DR3WH0."{% endif %}>{{ post.title }}</a></h3>
   {% endunless %}
 {% endfor %}
 
