@@ -18,10 +18,8 @@
     <meta name="description" content="Time Travel & Other Anomalies." />
   {% endif %}
 
-  <span typeof="http://schema.org/CreativeWork" resource="{{ site.url }}{{ page.url }}">
-
   <!-- RDFa Dublin Core Metadata -->
-  <span vocab="http://purl.org/dc/terms/">
+  <span vocab="http://purl.org/dc/terms/" resource="{{ site.url }}{{ page.url }}#dc">
   <meta property="creator rightsHolder" content="DR3WH0" resource="{{ site.url }}{{ page.url }}#author" />
   <meta property="language" content="en" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
@@ -54,7 +52,7 @@
   </span>
 
   <!-- Open Graph Metadata -->
-  <span vocab="http://ogp.me/ns#">
+  <span vocab="http://ogp.me/ns#" resource="{{ site.url }}{{ page.url }}#ogp">
   <meta property="site_name" content="DR3WH0: Time Travel & Other Anomalies" />
   {% if page.title %}<meta property="title" content="{{ page.title }}" />{% endif %}
   {% if page.description %}<meta property="description" content="{{ page.description }}" />
@@ -65,6 +63,5 @@
   {% else %}
     <meta property="description" content="A photo/poetry/music blog by DR3WH0." />
   {% endif %}
-  </span>
   </span>
 </head>
