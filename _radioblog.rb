@@ -263,6 +263,8 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 		sleep(60) # poll lfm api every 60 seconds
 		break if q[:user_quit]
 
+=begin  last.fm no longer presents an "are you listening dialog" that requires user action 2014-09-07
+
 		begin # close 'are you listening' dialog
 			elements = Array.new
 			elements = driver.find_elements(:class, "dialogConfirm")
@@ -281,7 +283,8 @@ def manage_radio(driver, station, q) # resume radio & tweet tracks
 			puts "ERROR >> are you listening dialog (timeout)"
 			next
 		end
-		
+=end
+
 		begin # get most recent track
 			open(recent_url, :read_timeout=>5) do |body|
 			data = XmlSimple.xml_in body.read
