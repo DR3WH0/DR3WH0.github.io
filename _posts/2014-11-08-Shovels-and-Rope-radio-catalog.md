@@ -4,7 +4,7 @@ published: true
 category: catalog
 ---
 
-**Saturday, November  8, 2014** - [RADIO](/2014/11/08/Shovels-&-Rope-radio)
+**Saturday, November  8, 2014** - [RADIO](/2014/11/08/Shovels-and-Rope-radio)
 
 *   10:49:15  [Birmingham](http://goo.gl/iPzsy6) by [Shovels a. Rope](http://www.last.fm/music/Shovels+a.+Rope) - http://goo.gl/yT89BP
 
