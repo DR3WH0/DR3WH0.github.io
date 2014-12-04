@@ -9,7 +9,7 @@ require 'googl'
 include ERB::Util
 
 def get_radio # station name
-	print "Enter artist or tag: "
+	print "\nEnter artist or tag: "
 	station = gets.chomp
 	puts "\nLoading \'#{station}\' Radio in Firefox >> Please wait..."
 	station
