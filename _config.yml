@@ -7,7 +7,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
-paginate: 7
+paginate: 11
 # paginate_path: "posts.html/page:num"
 
 production_url : http://dr3wh0.net
