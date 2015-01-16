@@ -28,7 +28,7 @@ category: radio
 
 *   12:30:06  [1968 (Przecladaniec Mix)](http://goo.gl/kw7Hfc) by [Psi Performer](http://www.last.fm/music/Psi+Performer)
 
-    [![Album Cover](http://userserve-ak.last.fm/serve/174s/77685418.jpg)](http://www.last.fm/music/Sutekh/Born+Again:+Collected+Remixes+1999-2005+(disc+2) "Born Again: Collected Remixes 1999-2005 \(disc 2\)")
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/77685418.jpg)](http://www.last.fm/music/Sutekh/Born+Again:+Collected+Remixes+1999-2005+\(disc+2\) "Born Again: Collected Remixes 1999-2005 (disc 2)")
 
 *   12:36:13  [Forcasa 3](http://goo.gl/tQtGNR) by [Bola](http://www.last.fm/music/Bola)
 
