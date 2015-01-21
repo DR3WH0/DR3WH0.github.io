@@ -4,154 +4,78 @@ require 'xmlsimple'
 require 'nokogiri'
 require 'erb'
 require 'googl'
+require 'colorize'
 
 include ERB::Util
 
-def get_radio # station name
-	print "\nEnter station name: "
-	station = gets.chomp
-	puts "\n\'#{station}\' Radio"
-	station
-end
-
-def shorten(url, blog) # create short urls with goo.gl
+def shorten(url, blog, name) # create short urls with goo.gl
 	begin
-		urlshortener = Googl.shorten(url)
-		shorturl = urlshortener.short_url
-		shorturl
+		shorturl = Googl.shorten(url).short_url
 	rescue Exception
-		puts "ERROR >> create goo.gl URL"
+		puts "ERROR >> create goo.gl URL for #{name}".red
 		"#{blog}"
 	end
 end
 
 def format_hash(tagdata)
-	tagname = String.new
-	hashtag = String.new
-	tagname = tagdata['name'][0]
-	hashtag = tagname.gsub(/([- ])/, '').downcase
-	hashtag.gsub!("\:", '')
-	hashtag
+	hashtag = ""
+	hashtag = tagdata['name'][0].gsub(/([- ])/, '').downcase.gsub("\:", '')
 end
 
 def get_tags(tags_url, tweetlen) # get up to three tags
 	begin
-		hashtags = String.new
+		hashtags = ""
 		open(tags_url, :read_timeout=>5) do |body|
 			data = XmlSimple.xml_in body.read
 
 			toptags = data['toptags'][0]
-			unless toptags['tag'] == nil # some tracks have no tags
+			if toptags['tag'].nil? # some tracks have no tags
+				hashtags = "#lastfm #music"
+			else
 				tagone = toptags['tag'][0]
 				tagtwo = toptags['tag'][1]
 				tagtre = toptags['tag'][2]
 				onehash = format_hash(tagone)
 				tweetlen = tweetlen + html_escape(onehash).length + 2
-				unless tweetlen > 140 # cascading tweet length & nil check
-					unless tagtwo == nil
+				if tweetlen > 140
+					puts "ERROR >> tweet too long (#{tweetlen}): ##{onehash} deleted (T1)".red
+					hashtags = "#lastfm #music"
+				else
+					if tagtwo.nil?
+						hashtags = "#lastfm #music ##{onehash}"
+					else
 						twohash = format_hash(tagtwo)
 						tweetlen = tweetlen + html_escape(twohash).length + 2
-						unless tweetlen > 140
-							unless tagtre == nil
+						if tweetlen > 140
+							puts "ERROR >> tweet too long (#{tweetlen}): ##{twohash} deleted (T2)".red
+							hashtags = "#lastfm #music ##{onehash}"
+						else
+							if tagtre.nil?
+								hashtags = "#lastfm #music ##{onehash} ##{twohash}" # T3 nil
+							else
 								trehash = format_hash(tagtre)
 								tweetlen = tweetlen + html_escape(trehash).length + 2
-								unless tweetlen > 140
-									hashtags = "#lastfm #music ##{onehash} ##{twohash} ##{trehash}"
-								else
-									puts "ERROR >> tweet too long (#{tweetlen}): ##{trehash} deleted (T3)"
+								if tweetlen > 140
+									puts "ERROR >> tweet too long (#{tweetlen}): ##{trehash} deleted (T3)".red
 									hashtags = "#lastfm #music ##{onehash} ##{twohash}"
+								else
+									hashtags = "#lastfm #music ##{onehash} ##{twohash} ##{trehash}"
 								end
-							else
-								hashtags = "#lastfm #music ##{onehash} ##{twohash}" # T3 nil
 							end
-						else
-							puts "ERROR >> tweet too long (#{tweetlen}): ##{twohash} deleted (T2)"
-							hashtags = "#lastfm #music ##{onehash}"
 						end
-					else
-						hashtags = "#lastfm #music ##{onehash}" # T2 nil
 					end
-				else
-					puts "ERROR >> tweet too long (#{tweetlen}): ##{onehash} deleted (T1)"
-					hashtags = "#lastfm #music"
 				end
-			else
-				hashtags = "#lastfm #music" # T1 nil
 			end
 		end
 
 		hashtags
 
 	rescue OpenURI::HTTPError # 400 Bad Request
-		puts "ERROR >> track tags (400)"
+		puts "ERROR >> track tags (400)".red
 		"#lastfm #music"
 	rescue Timeout::Error # connection timed out
-		puts "ERROR >> track tags (timeout)"
+		puts "ERROR >> track tags (timeout)".red
 		"#lastfm #music"
-	end
-end
-
-def free_download(info_url, artist, name, hashtags, tweet, tcolen, blog)
-	begin
-		open(info_url, :read_timeout=>5) do |body|
-			data = XmlSimple.xml_in body.read
-
-			track = data['track'][0]
-			unless track['freedownload'] == nil
-				puts "FREE MP3  \'#{artist} - #{name}.mp3\'"
-				yamlname = "#{artist} - #{name}"
-				yamlname.gsub!("\'", "\\\'")
-				yamlname.gsub!("\"", "\\\'")
-				filename = "\'#{artist} - #{name}.mp3\'"
-				dl_url = track['freedownload'][0]
-				shortdlurl = shorten(dl_url, blog)
-
-				dl_text = html_escape("FREE #MP3 #{filename} #{shortdlurl} #{hashtags}")
-				dl_check = html_escape("FREE #MP3 #{filename}  #{hashtags}")
-				dl_textlen = dl_check.length + tcolen
-
-				if dl_textlen > 140 # tweet length check
-					puts "ERROR >> tweet too long (#{dl_textlen}): track tags deleted"
-					dl_text = html_escape("FREE #MP3 #{filename} #{shortdlurl} #lastfm #music")
-					dl_check = html_escape("FREE #MP3 #{filename}  #lastfm #music")
-					dl_textlen = dl_check.length + tcolen
-					if dl_textlen > 140
-						puts "ERROR >> tweet still too long (#{dl_textlen}): #music tag deleted"
-						dl_text = html_escape("FREE #MP3 #{filename} #{shortdlurl} #lastfm")
-						dl_check = html_escape("FREE #MP3 #{filename}  #lastfm")
-						dl_textlen = dl_check.length + tcolen
-						if dl_textlen > 140
-							puts "ERROR >> file name is huge (#{dl_textlen}): #lastfm tag deleted"
-							dl_text = html_escape("FREE #MP3 #{filename} #{shortdlurl}")
-						end
-					end
-				end
-
-				free_dl = %x[twurl -d "status=#{dl_text}" "#{tweet}"]
-
-				config = YAML::load(File.open('_config.yml'))
-				tracks = config['tracks']
-				names = Array.new
-
-				tracks.each do |track|
-					names.push(track['name'])
-				end
-
-				unless names.include? yamlname
-					# add track to YAML formatted log file
-					time = Time.new
-					t = time.strftime("%Y-%m-%d %a %H:%M:%S")
-					log = "  - name : #{yamlname}\n    url : #{shortdlurl}\n    date: #{t}\n"
-					File.open('_config.yml', 'a') { |file| file.write(log) }
-					shortdlurl
-				end
-			end
-		end
-
-	rescue OpenURI::HTTPError # 400 Bad Request
-		puts "ERROR >> free download info (400)"
-	rescue Timeout::Error # connection timed out
-		puts "ERROR >> free download info (timeout)"
 	end
 end
 
@@ -161,43 +85,23 @@ def get_album(info_url)
 			data = XmlSimple.xml_in body.read
 
 			track = data['track'][0]
-			unless track['album'] == nil
+			if track['album'].nil?
+				"![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png \"DR3WH0 RadioBlog\")"
+			else
 				album = track['album'][0]
 				title = album['title'][0]
+				url = album['url'][0].gsub('(', '\(').gsub(')', '\)')
 				image = album['image'][2]['content']
-				"![Album Cover](#{image} \"#{title}\")"
-			else
-				"![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png \"DR3WH0 RadioBlog\")"
+				"[![Album Cover](#{image})](#{url} \"#{title}\")"
 			end
 		end
 
 	rescue OpenURI::HTTPError # 400 Bad Request
-		puts "ERROR >> get image (400)"
+		puts "ERROR >> get image (400)".red
 		"![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png \"DR3WH0 RadioBlog\")"
 	rescue Timeout::Error # connection timed out
-		puts "ERROR >> get image (timeout)"
+		puts "ERROR >> get image (timeout)".red
 		"![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png \"DR3WH0 RadioBlog\")"
-	end
-end
-
-def get_tune(apiartist, apiname, blog)
-	begin
-		query = url_encode("#{apiartist} #{apiname}")
-		searchurl = "http://get-tune.net/?a=music&q=#{query}"
-		page = Nokogiri::HTML(open(searchurl))
-		downlink = page.css("a[class='playlist-btn-down no-ajaxy']")[0]['href']
-		shortdownlink = shorten(downlink, blog)
-
-		unless shortdownlink == blog
-			shortdownlink
-		else
-			nil
-		end
-
-	rescue OpenURI::HTTPError # 400 Bad Request
-		puts "ERROR >> get tune (400)"
-	rescue Timeout::Error # connection timed out
-		puts "ERROR >> get tune (timeout)"
 	end
 end
 
@@ -211,11 +115,12 @@ def manage_radio(station, q) # tweet tracks
 	lfm_url = "http://ws.audioscrobbler.com/2.0/?method="
 	recent_url = "#{lfm_url}user.getrecenttracks&user=#{lfm_user}&api_key=#{lfm_key}&limit=1"
 	tcolen = 22 # t.co short_url_length https://dev.twitter.com/docs/api/1.1/get/help/configuration
-	@names = Array.new
+	@names = []
 	num = 0
+	run = 0
 
 	puts "\nEnter \'quit\' at any time ..."
-	radiobegin = %x[twurl -d "status=BEGIN #{station} PlayRadioBlog #{blog} on DR3WH0.NET #{infotags}" "#{tweet}"]
+	radiobegin = %x[twurl -d "status=BEGIN #{station} Radio on DR3WH0.NET #{infotags}" "#{tweet}"]
 
 	time = Time.new
 	t = time.strftime("%Y-%m-%d")
@@ -223,19 +128,12 @@ def manage_radio(station, q) # tweet tracks
 	mdt = time.strftime("/%Y/%m/%d/")
 	filestation = station.gsub(' ', '-')
 
-	unless File.file?("./_posts/#{t}-#{filestation}-radio.md")
-		post = "---\nlayout: post\npublished: true\ncategory: radio\n---\n\n**#{dt}** - [CATALOG](#{mdt}#{filestation}-radio-catalog)\n\n"
+	if File.file?("./_posts/#{t}-#{filestation}-radio.md")
+		post = "\n\n**#{dt}**\n\n"
 	else
-		post = "\n\n**#{dt}** - [CATALOG](#{mdt}#{filestation}-radio-catalog)\n\n"
+		post = "---\nlayout: post\npublished: true\ncategory: radio\n---\n\n**#{dt}**\n\n"
 	end
 	File.open("./_posts/#{t}-#{filestation}-radio.md", 'a') { |file| file.write(post) }
-
-	unless File.file?("./_posts/#{t}-#{filestation}-radio-catalog.md")
-		post = "---\nlayout: post\npublished: true\ncategory: catalog\n---\n\n**#{dt}** - [RADIO](#{mdt}#{filestation}-radio)\n\n"
-	else
-		post = "\n\n**#{dt}** - [RADIO](#{mdt}#{filestation}-radio)\n\n"
-	end
-	File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
 
 	loop do
 		sleep(60) # poll lfm api every 60 seconds
@@ -243,15 +141,17 @@ def manage_radio(station, q) # tweet tracks
 
 		begin # get most recent track
 			open(recent_url, :read_timeout=>5) do |body|
-			data = XmlSimple.xml_in body.read
+				data = XmlSimple.xml_in body.read
 
-				unless data == nil
+				unless data.nil?
+					run += 1
 					recenttracks = data['recenttracks'][0]
-					if recenttracks['track'][1] == nil
+					if recenttracks['track'][1].nil?
 						track = recenttracks['track'][0]
 					else  # ignore 'listening now' tracks
 						track = recenttracks['track'][1]
 					end
+
 
 					@artist = track['artist'][0]['content']
 					@apiartist = @artist.dup
@@ -263,19 +163,30 @@ def manage_radio(station, q) # tweet tracks
 					@name.gsub!("&", "a.")
 					@name.gsub!("\"", "\'")
 
+					if run == 1
+						@prev_name = @name.dup
+						next
+					end
+
+					next if @prev_name == @name
+
 					url = track['url'][0]
-					@shorturl = shorten(url, blog)
+					loop do
+						@shorturl = shorten(url, blog, @name)
+						@shorturl == blog ? next : break
+					end
+					@prev_name = @name.dup
 				end
 			end
 
 		rescue OpenURI::HTTPError # 400 Bad Request
-			puts "ERROR >> recent tracks (400)"
+			puts "ERROR >> recent tracks (400)".red
 			next
 		rescue Timeout::Error # connection timed out
-			puts "ERROR >> recent tracks (timeout)"
+			puts "ERROR >> recent tracks (timeout)".red
 			next
 		rescue
-			puts "ERROR >> recent tracks (unknown)"
+			puts "ERROR >> recent tracks (unknown)".red
 			next
 		end
 
@@ -294,52 +205,55 @@ def manage_radio(station, q) # tweet tracks
 			displaytime = time.strftime("%H:%M:%S")
 			displaytext = "#{displaytime}  #{@name} by #{@artist}"
 
-			text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl} #{@hashtags}")
+			text = html_escape("#{displaytime}  #{@name.gsub("\'", "")} by #{@artist.gsub("\'", "")} #{@shorturl} #{@hashtags}")
 			text_check = html_escape("#{displaytime}  #{@name} by #{@artist}  #{@hashtags}")
 			textlen = text_check.length + tcolen
 			@names.push(@name) # add track to session array
 
 			if textlen > 140 # double check tweet length
 				if @hashtags.length > 14
-					puts "ERROR >> tweet too long (#{textlen}): track tags deleted"
+					puts "ERROR >> tweet too long (#{textlen}): track tags deleted".red
 					text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl} #lastfm #music")
 					text_check = html_escape("#{displaytime}  #{@name} by #{@artist}  #lastfm #music")
 					textlen = text_check.length + tcolen
 					if textlen > 140
-						puts "ERROR >> tweet still too long (#{textlen}): #music tag deleted"
+						puts "ERROR >> tweet still too long (#{textlen}): #music tag deleted".red
 						text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl} #lastfm")
 						text_check = html_escape("#{displaytime}  #{@name} by #{@artist}  #lastfm")
 						textlen = text_check.length + tcolen
 						if textlen > 140
-							puts "ERROR >> tweet still too long (#{textlen}): #lastfm tag deleted"
+							puts "ERROR >> tweet still too long (#{textlen}): #lastfm tag deleted".red
 							text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl}")
 							text_check = html_escape("#{displaytime}  #{@name} by #{@artist} ")
 							textlen = text_check.length + tcolen
 							if textlen > 140
-								puts "ERROR >> track name is huge: url deleted"
+								puts "ERROR >> track name is huge: url deleted".red
 								text = html_escape("#{displaytime}  #{@name} by #{@artist} #lastfm")
 							end
 						end
 					end
 				else
-					puts "ERROR >> tweet too long (#{textlen}): #music tag deleted"
+					puts "ERROR >> tweet too long (#{textlen}): #music tag deleted".red
 					text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl} #lastfm")
 					text_check = html_escape("#{displaytime}  #{@name} by #{@artist}  #lastfm")
 					textlen = text_check.length + tcolen
 					if textlen > 140
-						puts "ERROR >> tweet still too long (#{textlen}): #lastfm tag deleted"
+						puts "ERROR >> tweet still too long (#{textlen}): #lastfm tag deleted".red
 						text = html_escape("#{displaytime}  #{@name} by #{@artist} #{@shorturl}")
 						text_check = html_escape("#{displaytime}  #{@name} by #{@artist} ")
 						textlen = text_check.length + tcolen
 						if textlen > 140
-							puts "ERROR >> track name is huge: url deleted"
+							puts "ERROR >> track name is huge: url deleted".red
 							text = html_escape("#{displaytime}  #{@name} by #{@artist} #lastfm")
 						end
 					end
 				end
 			end
 
-			unless @names.size == 1 # ignore first stale track pulled from api
+			# tweet and write to jekyll post
+			# ignore first stale track pulled from api
+			if @names.size > 1
+				text.gsub!("\'", "\\\'")
 				tracktweet = %x[twurl -d "status=#{text}" "#{tweet}"]
 				puts "#{displaytext} (#{textlen})"
 				num += 1
@@ -347,37 +261,26 @@ def manage_radio(station, q) # tweet tracks
 				urlartist = @artist.gsub(' ', '+')
 				artisturl = "http://www.last.fm/music/#{urlartist}"
 
-				sleep(2) # give the lfm api a break
-				shortdlurl = free_download(info_url, @artist, @name, @hashtags, tweet, tcolen, blog)
-				sleep(2) # give the lfm api a break
 				album = get_album(info_url)
-
-				if shortdlurl
-					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) - [FREE MP3](#{shortdlurl})\n\n    #{album}\n\n"
-				else
-					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl})\n\n    #{album}\n\n"
-				end
+				post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl})\n\n    #{album}\n\n"
 				File.open("./_posts/#{t}-#{filestation}-radio.md", 'a') { |file| file.write(post) }
-
-				catalogurl = get_tune(@apiartist, @apiname, blog)
-				if catalogurl
-					post = "*   #{displaytime}  [#{@name}](#{@shorturl}) by [#{@artist}](#{artisturl}) - #{catalogurl}\n\n"
-					File.open("./_posts/#{t}-#{filestation}-radio-catalog.md", 'a') { |file| file.write(post) }
-				end
+				sleep(120) # pause for 2 minutes
 			end
 		end
 	end
 
 	num == 1 ? t = "track" : t = "tracks"
 	radiodate = time.strftime("%Y/%m/%d")
-	radioend = %x[twurl -d "status=END #{station} radio (#{num} #{t}) #{infotags} DR3WH0.NET/#{radiodate}/#{filestation}-radio" "#{tweet}"]
-	puts "END \'#{station}\' Radio (#{num} #{t}) >> Goodbye!"
+	radioend = %x[twurl -d "status=#{station} radio (#{num} #{t}) #{infotags} DR3WH0.NET/#{radiodate}/#{filestation}-radio" "#{tweet}"]
+	puts "\nEND \'#{station}\' Radio (#{num} #{t}) >> Goodbye!"
 	exit
 end
 
-station = get_radio
+print "\nEnter station name: "
+station = gets.chomp
 
-q = Thread.new do # end radio station on 'quit'
+# end radio station on 'quit'
+q = Thread.new do
 	until gets.chomp == 'quit' ; end
 	Thread.current[:user_quit] = true
 end
