@@ -66,3 +66,35 @@ category: radio
 
     [![Album Cover](http://userserve-ak.last.fm/serve/174s/3705003.jpg)](http://www.last.fm/music/Laraaji/Ambient+3:+Day+of+Radiance+\(feat.+Brian+Eno\) "Ambient 3: Day of Radiance (feat. Brian Eno)")
 
+
+
+**Friday, January 23, 2015**
+
+*   14:04:25  [Aguirre i (L'acrime di rei)](http://goo.gl/p8pHxP) by [Popol Vuh](http://www.last.fm/music/Popol+Vuh)
+
+    ![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png "DR3WH0 RadioBlog")
+
+*   14:09:31  [Dem Wanderer](http://goo.gl/PeOjPH) by [Cluster](http://www.last.fm/music/Cluster)
+
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/42109609.png)](http://www.last.fm/music/Cluster/Sowiesoso "Sowiesoso")
+
+*   14:17:38  [Secret Currents](http://goo.gl/5tr0ZC) by [Stuart Dempster](http://www.last.fm/music/Stuart+Dempster)
+
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/33144785.jpg)](http://www.last.fm/music/Stuart+Dempster/Underground+Overlays+From+The+Cistern+Chapel "Underground Overlays From The Cistern Chapel")
+
+*   14:22:45  [Welcome](http://goo.gl/H8TLbl) by [Harmonia a. Eno '76](http://www.last.fm/music/Harmonia+a.+Eno+'76)
+
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/91260159.jpg)](http://www.last.fm/music/Harmonia+&+Eno+%2776/Tracks+And+Traces "Tracks And Traces")
+
+*   14:26:50  [Empire II](http://goo.gl/gbF9Il) by [Jon Hassell](http://www.last.fm/music/Jon+Hassell)
+
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/46126517.png)](http://www.last.fm/music/Jon+Hassell/Aka+%2F+Darbari+%2F+Java "Aka / Darbari / Java")
+
+*   14:32:57  [Downtown](http://goo.gl/VrsUUv) by [Mother Mallard's Portable Masterpiece Company](http://www.last.fm/music/Mother+Mallard's+Portable+Masterpiece+Company)
+
+    ![DR3WH0 Logo](https://dl.dropboxusercontent.com/u/8239797/DR3WH0.png "DR3WH0 RadioBlog")
+
+*   14:40:04  [Aguirre II](http://goo.gl/GD1lPX) by [Popol Vuh](http://www.last.fm/music/Popol+Vuh)
+
+    [![Album Cover](http://userserve-ak.last.fm/serve/174s/84354555.jpg)](http://www.last.fm/music/Popol+Vuh/Aguirre "Aguirre")
+
