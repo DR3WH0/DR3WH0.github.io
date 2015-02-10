@@ -271,7 +271,7 @@ def manage_radio(station, q) # tweet tracks
 
 	num == 1 ? t = "track" : t = "tracks"
 	radiodate = time.strftime("%Y/%m/%d")
-	radioend = %x[twurl -d "status=#{station} radio (#{num} #{t}) #{infotags} DR3WH0.NET/#{radiodate}/#{filestation}-radio" "#{tweet}"]
+	radioend = %x[twurl -d "status=#{station} radio (#{num} #{t}) DR3WH0.NET/#{radiodate}/#{filestation}-radio" "#{tweet}"]
 	puts "\nEND \'#{station}\' Radio (#{num} #{t}) >> Goodbye!"
 	exit
 end
