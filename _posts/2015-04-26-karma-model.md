@@ -26,3 +26,6 @@ tags: karma ontologies
 |  --- | -------- | ---|
 | `dpla:SourceResource1` | `dc:date` | `edm:TimeSpan1`|
 | `dpla:SourceResource1` | `dct:spatial` | `edm:Place1`|
+
+
+* http://cool.uris
