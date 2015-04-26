@@ -37,4 +37,5 @@ return blAggregationUri(getValue("BL Record ID"))
 | `ore:Aggregation1` | `edm:dataProvider` | `xsd:British Library`|
 
 
-* http://cool.uris
+* [Cool URIs](http://cool.uris)
+* [TCDL Karma Workshop](https://github.com/szeke/karma-tcdl-tutorial)
