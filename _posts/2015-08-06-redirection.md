@@ -6,4 +6,4 @@ category: photo
 tags: arrows night
 ---
 
-![Traffic Arrows](https://goo.gl/photos/58Hq46jjqe974NXk6)
+![Traffic Arrows](https://lh3.googleusercontent.com/bkAulKXb1TMESFCdINTZnjSDJ5Eq7TPWhznVx7A2JJQ=w1256-h707-no)
