@@ -173,6 +173,7 @@ def manage_radio(station, q) # tweet tracks
 					url = track['url'][0]
 					loop do
 						@shorturl = shorten(url, blog, @name)
+						sleep(60)
 						@shorturl == blog ? next : break
 					end
 					@prev_name = @name.dup
