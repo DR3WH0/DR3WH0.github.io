@@ -1,7 +1,7 @@
-# This is the default format. 
+# This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-# permalink: /:categories/:year/:month/:day/:title 
-permalink: /:year/:month/:day/:title 
+# permalink: /:categories/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
@@ -29,13 +29,13 @@ JB :
   #
   archive_path: /archive.html
   categories_path : /categories.html
-  tags_path : /tags.html  
-  
-  # Settings for all other include helpers can be defined by creating 
+  tags_path : /tags.html
+
+  # Settings for all other include helpers can be defined by creating
   # a hash with key named for the given helper. ex:
   #
   #   pages_list :
-  #     provider : "custom"   
+  #     provider : "custom"
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:
@@ -44,7 +44,7 @@ JB :
 
 # Prose.io Configuration
 #
-markdown: rdiscount
+# markdown: rdiscount
 prose:
   rooturl: '_posts'
   siteurl: 'http://dr3wh0.net/'
@@ -102,7 +102,7 @@ tracks :
 #    url : http://www.youtube.com/watch?v=u-MXZDkcPKM
   - name : Abfarhrt Hinwil - Radiowellen
     url : http://t.co/JrzTapEmhw
-  - name : Com Truise - Cyanide Sisters 
+  - name : Com Truise - Cyanide Sisters
     url : http://t.co/BRepBDsdAz
   - name : Point 7 - One Movie
     url : http://freedownloads.last.fm/download/209722767/One%2BMovie.mp3
@@ -122,11 +122,11 @@ tracks :
     url : http://t.co/WM16WZ9ug6
   - name : Point 7 - Hacker IP
     url : http://t.co/YIjeAFdwzi
-  - name : Abfahrt Hinwil - Links Oben 
+  - name : Abfahrt Hinwil - Links Oben
     url : http://t.co/XUiKfWxTj6
   - name : Gimmik - Thing on a Spring
     url : http://t.co/hrwKRcv7e4
-  - name : Abfahrt Hinwil - Sonic Surface 
+  - name : Abfahrt Hinwil - Sonic Surface
     url : http://t.co/5PfdFmiKVg
   - name : Abfahrt Hinwil - Trilogy
     url : http://t.co/Wg6EBntsgS
